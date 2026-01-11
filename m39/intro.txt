@@ -1,0 +1,55 @@
+1. project vite res
+2. component 
+3. jsx {} --> js
+4. props
+5. conditional rendering
+6. [ , , ,] map
+
+npm create vite@latest react-core-concept-part2 -- --template react 
+
+
+const [first, second] = [2, 5]
+undefined
+first
+2
+second
+5
+const myNums = [53, 70]
+undefined
+const [lang, war] = myNums;
+undefined
+function getSomething(num) {
+    return [24, 5]
+}
+undefined
+getSomething()
+(2) [24, 5]
+const [andolon, date] = getSomething();
+undefined
+andolon
+24
+function useState(initialValue) {
+    let state = initialValue; 
+    function setState(newValue) {
+        state = newValue;
+    }
+    return [state, setState]
+}
+
+
+google search --> react dev state
+docs porar ovvas valo. ai docs ta poro obossoi.
+
+google search --> react dev state --> useState
+const [state, setState] = useState(initialState)
+
+
+
+
+
+
+
+
+
+
+
