@@ -1,0 +1,962 @@
+===============================
+38-1 What is React, React vs Angular vs Vue
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React কী?
+- React এর ইতিহাস (সংক্ষেপে)?
+- কখন React ব্যবহার করা উচিত?
+- React vs Vue vs Next.js (সংক্ষেপে তুলনা)?
+- কখন Next.js ব্যবহার না করাই ভালো?
+- React.js এর জনপ্রিয় ফিচারগুলো কী কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. What is React?
+- React হলো একটি **JavaScript library** যা Facebook তৈরি করেছে।
+- মূল কাজ → **User Interface (UI)** তৈরি করা।
+- Component-based architecture → ছোট ছোট reusable অংশ দিয়ে বড় UI তৈরি করা যায়।
+- Virtual DOM ব্যবহার করে → দ্রুত এবং efficient rendering হয়।
+
+2. History of React (At a Glance)
+- 2011 → Facebook engineer Jordan Walke React তৈরি করেন।
+- 2013 → React ওপেন সোর্স করা হয়।
+- React Native (2015) → Mobile app development এর জন্য।
+- বর্তমানে → সবচেয়ে জনপ্রিয় frontend library, বড় বড় কোম্পানি ব্যবহার করছে।
+
+3. When to Use React
+- যখন reusable UI component দরকার।
+- বড় এবং dynamic web application বানাতে।
+- Single Page Application (SPA) তৈরি করতে।
+- যখন fast rendering এবং performance দরকার।
+
+4. React vs Vue vs Angular (At a Glance)
+| Feature            | React                          | Vue.js                        | Angular                       |
+|--------------------|--------------------------------|--------------------------------|--------------------------------|
+| Type               | Library                        | Framework (progressive)        | Full-fledged Framework         |
+| Created By         | Facebook (2013)                | Evan You (2014)                | Google (2010)                  |
+| Learning Curve     | Moderate                       | Easy                           | Steep                          |
+| Flexibility        | High (choose tools freely)     | Medium                         | Low (strict structure)         |
+| Best For           | Large-scale apps, SPA          | Small to medium apps           | Enterprise-level apps          |
+Sources: 
+
+5. React vs Next.js (At a Glance)
+- React → শুধু UI library, client-side rendering।
+- Next.js → React এর উপর তৈরি framework, server-side rendering (SSR) এবং static site generation (SSG) সাপোর্ট করে।
+- Next.js SEO friendly এবং production-ready features দেয়।
+
+6. When Not to Use Next.js
+- ছোট project যেখানে SSR/SSG দরকার নেই।
+- Static বা simple site যেখানে React যথেষ্ট।
+- যখন developer team Next.js এর advanced setup handle করতে পারবে না।
+
+7. Popular Features of React.js
+- Component-based architecture।
+- Virtual DOM → fast rendering।
+- JSX → JavaScript + HTML একসাথে লিখতে সুবিধা।
+- Unidirectional data flow → predictable state management।
+- Huge ecosystem → Redux, React Router, Next.js ইত্যাদি।
+- Strong community support।
+
+📌 Summary
+- React হলো Facebook তৈরি করা একটি UI library।
+- ইতিহাস → 2011 এ তৈরি, 2013 এ ওপেন সোর্স, বর্তমানে সবচেয়ে জনপ্রিয়।
+- React ব্যবহার হয় SPA, dynamic UI, বড় project এ।
+- React vs Vue vs Angular → React flexible, Vue সহজ, Angular enterprise-level।
+- React vs Next.js → React UI library, Next.js framework with SSR/SSG।
+- Next.js ব্যবহার না করার সময় → ছোট project বা simple site।
+- React এর জনপ্রিয় ফিচার → Component-based, Virtual DOM, JSX, ecosystem support।
+
+
+
+===============================
+38-2 What is Component, Component Types, Build Your First Component
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React এ component কী?
+- Component কেন ব্যবহার করা হয়?
+- Component এর ধরন কী কী?
+- কিভাবে প্রথম component তৈরি করা যায়?
+- Component export এবং import করার নিয়ম কী?
+- Component এর সুবিধা এবং pitfalls কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. What is Component?
+- Component হলো React এর মূল building block।
+- এটি একটি **function বা class** যা UI এর একটি অংশ return করে।
+- Component reusable → একই structure বারবার ব্যবহার করা যায়।
+👉 Example:
+function Welcome() {
+    return <h1>Hello, React!</h1>;
+}
+
+2. Why Use Component?
+- UI কে ছোট ছোট অংশে ভাগ করা যায়।
+- Reusable → একই component বিভিন্ন জায়গায় ব্যবহার করা যায়।
+- Maintainable → কোড সহজে পড়া এবং পরিবর্তন করা যায়।
+- Testable → ছোট অংশে বিভক্ত থাকায় সহজে পরীক্ষা করা যায়।
+
+3. Splitting a Calculator App into Components
+👉 Example Breakdown:
+- Display Component → ফলাফল দেখাবে।
+- Button Component → সংখ্যা বা অপারেটর বোতাম।
+- Container Component → সবকিছু একসাথে রাখবে।
+
+4. Types of Components
+1. Similar in look, different in data → একই UI, কিন্তু data আলাদা।
+2. Container Component → অন্য component গুলোকে wrap করে।
+3. No common pattern → কাজের সুবিধার জন্য breakdown।
+4. Stand-alone Component → স্বাধীনভাবে কাজ করে।
+
+5. How to Build a Component
+Steps:
+1. Export the component → অন্য ফাইলে ব্যবহার করার জন্য।
+2. Define the function → component এর logic লিখতে হবে।
+3. Add markup → return এর মধ্যে JSX লিখতে হবে।
+
+👉 Example:
+export default function Greeting() {
+    return <h2>Welcome to React!</h2>;
+}
+
+📌 Note:
+- Component এ return এর পরের লাইন ignore হয়।
+- Browser আসলে JSX কে JavaScript এ convert করে → React.createElement()।
+
+6. Export and Import a Component
+👉 Export:
+export default Greeting;
+
+👉 Import:
+import Greeting from './Greeting';
+
+7. Advantages of Components
+- Reusability → একই কোড বারবার ব্যবহার করা যায়।
+- Maintainability → কোড সহজে manage করা যায়।
+- Scalability → বড় project এ সহজে কাজ করা যায়।
+- Readability → কোড পরিষ্কার এবং সহজবোধ্য হয়।
+
+8. Pitfalls
+- Nested component বেশি render করলে performance কমে যায়।
+- অতিরিক্ত component render করলে bug হতে পারে।
+- State এবং props সঠিকভাবে manage না করলে সমস্যা হয়।
+
+📌 Summary
+- Component হলো React এর মূল building block।
+- Component ব্যবহার করলে UI কে ছোট ছোট reusable অংশে ভাগ করা যায়।
+- Component এর ধরন → similar look/different data, container, breakdown, stand-alone।
+- Component তৈরি করতে → export, function define, JSX return করতে হয়।
+- Export/Import → component reuse করার জন্য।
+- সুবিধা → reusability, maintainability, scalability।
+- Pitfall → অতিরিক্ত nested component performance কমায়।
+
+
+===============================
+38-3 JSX, Its Rules and Adding Dynamic Content
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- JSX কী এবং কেন ব্যবহার করা হয়?
+- Browser JSX পড়তে পারে না কেন?
+- JSX এর নিয়মগুলো কী কী?
+- JSX এ curly braces কোথায় ব্যবহার করা যায়?
+- Inline CSS কিভাবে লিখতে হয়?
+- কিভাবে প্রথম JSX component এ dynamic content যোগ করা যায়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. What is JSX?
+- JSX = JavaScript XML
+- JSX হলো JavaScript এর মধ্যে HTML-এর মতো syntax।
+- JSX ব্যবহার করলে UI কোড পড়া এবং লেখা সহজ হয়।
+👉 JSX আসলে browser সরাসরি বুঝতে পারে না → Babel এর মতো compiler JSX কে সাধারণ JavaScript এ convert করে।
+
+2. Why Can't Browser Read JSX?
+- Browser শুধুমাত্র pure JavaScript বুঝতে পারে।
+- JSX হলো JavaScript এর extension → compile না করলে browser error দেখায়।
+👉 Behind the Scene:
+JSX → Babel compiler → React.createElement() → JavaScript object → Virtual DOM → Real DOM render।
+
+3. Rules of JSX
+1. Return a single root element → সব JSX element একটি parent element এর মধ্যে থাকতে হবে।
+2. Close all the tags → সব HTML tag অবশ্যই properly close করতে হবে।
+3. Must use camelCase → attribute নাম camelCase হতে হবে (যেমন: className, onClick)।
+
+4. JavaScript in JSX with Curly Braces
+- Curly braces `{}` → JSX এর মধ্যে dynamic JavaScript expression লিখতে হয়।
+👉 Example:
+const name = "Faha";
+<p>Hello, {name}</p> // Output: Hello, Faha
+
+- Double Curly Braces `{{}}` → object pass করার জন্য।
+👉 Example (Inline CSS):
+<p style={{color: "red", fontSize: "20px"}}>Styled Text</p>
+
+5. Inline CSS in JSX
+- CSS property camelCase এ লিখতে হয়।
+- Value string আকারে দিতে হয়।
+👉 Example:
+<div style={{backgroundColor: "yellow", padding: "10px"}}>Box</div>
+
+6. Example Component with Dynamic Content
+👉 Code:
+import './App.css'
+
+function App() {
+  return (
+    <>
+      <h1>Vite + React</h1>
+      <Pet/>
+      <Sports/>
+      <Person/>
+      <Person/>
+      <Person/>
+      <Sports/>
+    </>
+  )
+}
+
+function Person(){
+  const age = 17;
+  const name = "Faha";
+  return (
+    <p>I am a person name, {name} {age}</p>
+  )
+}
+
+function Sports(){
+  return(
+    <div>
+      <h3>Cricket</h3>
+      <ul>
+        <li>Hanna</li>
+        <li>Hajan</li>
+      </ul>
+      <p>Playing and losing</p>
+    </div>
+  )
+}
+
+function Pet(){
+  return(
+    <p>cat</p>
+  )
+}
+
+export default App;
+
+📌 Explanation:
+- App component → root component, multiple child component render করছে।
+- Person component → dynamic content (name, age) curly braces দিয়ে দেখাচ্ছে।
+- Sports component → static list render করছে।
+- Pet component → simple text render করছে।
+
+7. Advantages of JSX
+- কোড readable এবং maintainable হয়।
+- Dynamic data সহজে render করা যায়।
+- HTML এবং JavaScript একসাথে লিখতে সুবিধা হয়।
+- Developer productivity বাড়ে।
+
+📌 Summary
+- JSX হলো JavaScript এর মধ্যে HTML-এর মতো syntax।
+- Browser JSX বুঝতে পারে না → Babel compiler convert করে।
+- JSX এর নিয়ম → single root element, সব tag close করতে হবে, camelCase attribute।
+- Curly braces → dynamic JavaScript expression লিখতে হয়।
+- Double curly braces → object pass করার জন্য (inline CSS)।
+- Component এ dynamic content curly braces দিয়ে render করা যায়।
+
+
+===============================
+38-4 Explore JSX and Props Basics
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- JSX কী এবং কেন ব্যবহার করা হয়?
+- JSX এর নিয়মগুলো কী কী?
+- Props কী এবং কিভাবে কাজ করে?
+- Component কিভাবে define এবং ব্যবহার করা হয়?
+- Inline CSS এবং external CSS কিভাবে ব্যবহার করা যায়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. What is JSX?
+- JSX = JavaScript XML
+- JSX হলো JavaScript এর মধ্যে HTML-এর মতো syntax।
+- JSX ব্যবহার করলে UI কোড readable এবং maintainable হয়।
+👉 Browser সরাসরি JSX বুঝতে পারে না → Babel compiler JSX কে React.createElement() এ convert করে।
+
+2. Rules of JSX
+1. Return a single root element → সব JSX element একটি parent element এর মধ্যে থাকতে হবে।
+2. Close all tags → সব HTML tag properly close করতে হবে।
+3. camelCase attributes → যেমন className, onClick।
+
+3. What are Props?
+- Props হলো parent component থেকে child component এ data পাঠানোর উপায়।
+- Props immutable → child component props পরিবর্তন করতে পারে না।
+👉 Example:
+<Developer name="Faha"></Developer>
+function Developer(props){
+  return <h3>Developer: {props.name}</h3>;
+}
+
+📌 Explanation:
+- এখানে App component থেকে Developer component এ name পাঠানো হয়েছে।
+- Developer component props.name দিয়ে সেই data দেখাচ্ছে।
+
+4. Example Components
+👉 App Component:
+function App() {
+  return (
+    <>
+      <h1>React Core Concepts</h1>
+      <Student></Student>
+      <Student></Student>
+      <Person/>
+      <Developer name="Faha"></Developer>
+      <Developer name="Raha"></Developer>
+      <Developer name="Maha"></Developer>
+    </>
+  )
+}
+
+👉 Developer Component (Props + Inline CSS):
+function Developer(props){
+  return(
+    <div style={{
+      border: '2px solid green',
+      borderRadius: '20px'
+    }}>
+      <h3>Developer: {props.name}</h3>
+      <p>technology: </p>
+    </div>
+  )
+}
+
+👉 Person Component (Dynamic Content + Inline CSS):
+function Person(){
+  const age = 17;
+  const name = "Faha";
+
+  const personStyle = {
+    color: 'red',
+    textAlign: 'right'
+  }
+
+  return (
+    <p style={personStyle}>I am a person name, {name} {age}</p>
+  )
+}
+
+👉 Student Component (External CSS):
+function Student(){
+  return(
+    <div className='student'>
+      <p>Name: </p>
+      <p>Dept: </p>
+    </div>
+  )
+}
+
+📌 App.css:
+.student {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid salmon;
+}
+
+5. Styling in React
+- Inline CSS → style attribute এ object আকারে দেওয়া হয়।
+- External CSS → className ব্যবহার করে CSS file থেকে style apply করা হয়।
+
+6. Advantages of JSX and Props
+- JSX → কোড readable, HTML + JS একসাথে লেখা যায়।
+- Props → component reusable হয়, dynamic data render করা যায়।
+- Styling flexibility → inline এবং external CSS দুটোই ব্যবহার করা যায়।
+- Component-based architecture → কোড modular এবং maintainable হয়।
+
+📌 Summary
+- JSX হলো JavaScript এর মধ্যে HTML-এর মতো syntax।
+- JSX এর নিয়ম → single root element, সব tag close করতে হবে, camelCase attribute।
+- Props → parent থেকে child এ data পাঠানোর উপায়।
+- Inline CSS → object আকারে style দেওয়া হয়।
+- External CSS → className দিয়ে CSS file থেকে style apply করা হয়।
+- Component → reusable, maintainable, dynamic UI তৈরি করতে সাহায্য করে।
+
+
+===============================
+38-5 Prop Types and How to Pass/Read a Prop
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Props কী?
+- Props কিভাবে pass এবং read করা হয়?
+- Props এর default value কিভাবে নির্ধারণ করা যায়?
+- Props এর value কিভাবে ব্যবহার করা হয়?
+- Props এর analogy কী?
+- JSX এ props কিভাবে forward করা যায়?
+- JSX children হিসেবে props কিভাবে pass করা যায়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. What are Props?
+- Props = Properties
+- React এ props হলো parent component থেকে child component এ data পাঠানোর উপায়।
+- Props immutable → child component props পরিবর্তন করতে পারে না।
+👉 Analogy: Props হলো network এর মতো → বাইরে থেকে data আসে। State হলো ভিতরের data।
+
+2. Pass and Read Props
+👉 Example:
+<Player name="tamim" runs="5000"></Player>
+<Player name="mushi" runs="3000"></Player>
+
+function Player({name, runs}){
+  return(
+    <div className='student'>
+      <h3>Name: {name}</h3>
+      <p>Runs: {runs}</p>
+    </div>
+  )
+}
+
+📌 Explanation:
+- App component থেকে Player component এ name এবং runs পাঠানো হয়েছে।
+- Player component props destructuring করে সেই data দেখাচ্ছে।
+
+3. Default Value in Props
+👉 Example:
+<Salami event="Graduation"></Salami>
+
+function Salami({event, amount = 0}){
+  return(
+    <div className='student'>
+      <p>Salami For: {event}</p>
+      <p>Amount {amount}</p>
+    </div>
+  )
+}
+
+📌 Explanation:
+- amount prop না পাঠালে default value হিসেবে 0 ব্যবহার হবে।
+- Default parameter → function এর মধ্যে নির্ধারণ করা যায়।
+
+4. Different Values of Props
+- Props dynamic হতে পারে → string, number, boolean, array, object, function, JSX।
+👉 Example:
+<Developer name="Faha"></Developer> // string
+<Player runs={5000}></Player> // number
+<Component isActive={true}></Component> // boolean
+<List items={["a", "b"]}></List> // array
+<User data={{id:1, name:"Rahim"}}></User> // object
+<Button onClick={handleClick}></Button> // function
+<Wrapper><Child/></Wrapper> // JSX children
+
+5. Ways to Read Props
+- Destructuring → function parameter এ।
+👉 Example:
+function Player({name, runs}) { ... }
+
+- props object → function এর মধ্যে।
+👉 Example:
+function Player(props) {
+  return <h3>{props.name}</h3>;
+}
+
+6. Forwarding Props with JSX Spread Syntax
+👉 Example:
+const playerData = {name: "Tamim", runs: 5000};
+<Player {...playerData}></Player>
+
+📌 Explanation:
+- Spread syntax দিয়ে object এর সব property props হিসেবে পাঠানো যায়।
+
+7. Passing JSX as Children
+👉 Example:
+<Wrapper>
+  <p>This is child JSX</p>
+</Wrapper>
+
+function Wrapper({children}){
+  return <div>{children}</div>;
+}
+
+📌 Explanation:
+- children prop → JSX এর মধ্যে nested content পাঠানোর জন্য ব্যবহার হয়।
+
+📌 Summary
+- Props হলো parent থেকে child এ data পাঠানোর উপায়।
+- Props immutable → child component পরিবর্তন করতে পারে না।
+- Props pass করা যায় string, number, boolean, array, object, function, JSX হিসেবে।
+- Props পড়ার উপায় → destructuring বা props object।
+- Default value → function parameter এ নির্ধারণ করা যায়।
+- Spread syntax → object এর property গুলো props হিসেবে পাঠানো যায়।
+- children prop → JSX nested content পাঠানোর জন্য ব্যবহার হয়।
+
+
+===============================
+38-6 Read Only Props & Two Ways of Conditional Rendering
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Props কী এবং কেন read-only?
+- Conditional rendering কীভাবে কাজ করে?
+- React এ import এবং export এর নিয়ম কী?
+- Conditional rendering এর দুইটি পদ্ধতি কী কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Props are Read-Only
+- Props হলো parent থেকে child component এ পাঠানো data।
+- Props immutable → child component props পরিবর্তন করতে পারে না।
+👉 Example:
+<ToDo task="Learn React" isDone={true} time={50}></ToDo>
+
+📌 Explanation:
+- এখানে App component থেকে ToDo component এ props পাঠানো হয়েছে।
+- ToDo component শুধু props পড়তে পারে, পরিবর্তন করতে পারে না।
+
+2. Import and Export
+- Export → component অন্য ফাইলে ব্যবহার করার জন্য।
+- Import → অন্য ফাইল থেকে component আনার জন্য।
+👉 Example:
+import ToDo from './ToDo';
+export default App;
+
+📌 Explanation:
+- App.jsx এ ToDo component import করা হয়েছে।
+- ToDo.jsx এ ToDo component export করা হয়েছে।
+
+3. Conditional Rendering (Two Ways)
+👉 Way 1: if-else statement
+export default function ToDo({task, isDone}){
+   if(isDone === true){
+     return <li>Done: {task}</li>;
+   } else {
+     return <li>Pending: {task}</li>;
+   }
+}
+
+📌 Explanation:
+- isDone true হলে "Done" দেখাবে।
+- isDone false হলে "Pending" দেখাবে।
+
+👉 Way 2: Inline condition (ternary operator)
+export default function ToDo({task, isDone, time = 0}){
+   return (
+     isDone 
+       ? <li>Done: {task} Duration: {time}</li>
+       : <li>To be done: {task}</li>
+   );
+}
+
+📌 Explanation:
+- এখানে ternary operator ব্যবহার করে এক লাইনে conditional rendering করা হয়েছে।
+- Default parameter → time না দিলে 0 হবে।
+
+4. Example Code (App.jsx)
+import './App.css'
+import ToDo from './ToDo';
+
+function App() {
+  const time = 50;
+  return (
+    <>
+      <h1>React Core Concepts</h1>
+      <ToDo task="Learn React" isDone={true} time={time}></ToDo>
+      <ToDo task="Revise JS" isDone={false}></ToDo>
+      <ToDo task="Take a shower" isDone={true} time="100"></ToDo>
+    </>
+  )
+}
+export default App;
+
+5. Example Code (ToDo.jsx)
+export default function ToDo({task, isDone, time = 0}){
+   if(isDone === true){
+     return <li>Done: {task} Duration: {time}</li>;
+   }
+   return <li>To be done: {task}</li>;
+}
+
+📌 Explanation:
+- এখানে props destructuring করা হয়েছে।
+- Conditional rendering দিয়ে task এর status দেখানো হয়েছে।
+- time prop না দিলে default value 0 হবে।
+
+6. Advantages
+- Props → component reusable হয়।
+- Conditional rendering → dynamic UI তৈরি করা যায়।
+- Import/Export → কোড modular এবং maintainable হয়।
+
+📌 Summary
+- Props হলো read-only data যা parent থেকে child এ যায়।
+- Conditional rendering দুইভাবে করা যায় → if-else এবং ternary operator।
+- Import/Export → component reuse করার জন্য।
+- Default parameter → props না পাঠালে fallback value ব্যবহার করা যায়।
+
+
+===============================
+38-7 Six Ways to Do Conditional Rendering in React
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Conditional Rendering কী?
+- React এ Conditional Rendering কেন দরকার?
+- JSX এ Conditional Rendering কিভাবে করা যায়?
+- Conditional Rendering এর ছয়টি পদ্ধতি কী কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. What is Conditional Rendering?
+- Conditional Rendering মানে হলো শর্ত অনুযায়ী UI পরিবর্তন করা।
+- React এ dynamic UI তৈরি করার জন্য এটি ব্যবহার করা হয়।
+👉 Example: কোনো task complete হলে "Done" দেখানো, না হলে "Pending" দেখানো।
+
+2. Why Conditional Rendering is Necessary?
+- User interaction অনুযায়ী UI পরিবর্তন করতে।
+- Dynamic data অনুযায়ী বিভিন্ন UI দেখাতে।
+- Application কে flexible এবং responsive করতে।
+
+3. Conditional Rendering in JSX
+- JSX এর মধ্যে JavaScript expression ব্যবহার করে শর্ত অনুযায়ী UI render করা যায়।
+
+4. Six Ways of Conditional Rendering
+
+👉 Way 1: if Statement
+export default function ToDo({task, isDone}){
+   if(isDone === true){
+     return <li>Done: {task}</li>;
+   } else {
+     return <li>Pending: {task}</li>;
+   }
+}
+
+👉 Way 2: Return null (skip rendering)
+export default function ToDo({task, isDone}){
+   if(isDone === true){
+     return null; // কিছুই render হবে না
+   } else {
+     return <li>Pending: {task}</li>;
+   }
+}
+
+👉 Way 3: Ternary Operator (? :)
+export default function ToDo({task, isDone, time = 0}){
+   return isDone 
+     ? <li>Done: {task} task: {time}</li> 
+     : <li>Not Done: {task}</li>;
+}
+
+👉 Way 4: Logical AND (&&)
+export default function ToDo({task, isDone, time = 0}){
+   return isDone && <li>Task: {task} time: {time}</li>;
+}
+
+📌 Explanation:
+- isDone true হলে UI render হবে।
+- false হলে কিছুই render হবে না।
+
+👉 Way 5: Logical OR (||)
+export default function ToDo({task, isDone, time = 0}){
+   return isDone || <li>Not Done Task: {task} time: {time}</li>;
+}
+
+📌 Explanation:
+- isDone false হলে OR condition এর পরের অংশ render হবে।
+
+👉 Way 6: Assigning JSX to a Variable
+export default function ToDo({task, isDone, time}){
+   let listItem;
+   if(isDone === true){
+     listItem = <li>Done: {task} time: {time ? 'I am done' : 'not done yet'}</li>;
+   } else {
+     listItem = <li>Pending: {task}</li>;
+   }
+   return listItem;
+}
+
+📌 Explanation:
+- JSX কে variable এ assign করে পরে return করা যায়।
+- Complex condition handle করার জন্য এটি সুবিধাজনক।
+
+5. Example App.jsx
+import './App.css'
+import ToDo from './ToDo';
+
+function App() {
+  const time = 50;
+  return (
+    <>
+      <h1>React Core Concepts</h1>
+      <ToDo task="Learn React" isDone={true} time={time}></ToDo>
+      <ToDo task="Revise JS" isDone={false}></ToDo>
+      <ToDo task="Take a shower" isDone={true} time="100"></ToDo>
+    </>
+  )
+}
+export default App;
+
+📌 Explanation:
+- App component থেকে ToDo component এ props পাঠানো হয়েছে।
+- ToDo component conditional rendering ব্যবহার করে UI পরিবর্তন করছে।
+
+6. Advantages of Conditional Rendering
+- Dynamic UI তৈরি করা যায়।
+- User interaction অনুযায়ী UI পরিবর্তন হয়।
+- কোড readable এবং maintainable হয়।
+- বিভিন্ন শর্ত অনুযায়ী flexible rendering সম্ভব।
+
+📌 Summary
+- Conditional Rendering → শর্ত অনুযায়ী UI render করা।
+- React এ এটি দরকার dynamic এবং responsive UI এর জন্য।
+- ছয়টি পদ্ধতি → if statement, return null, ternary operator, logical AND, logical OR, variable assignment।
+
+
+===============================
+38-8 (Advanced) Rendering Lists of Users Using map
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React এ list rendering কীভাবে কাজ করে?
+- কেন map() ব্যবহার করা হয়?
+- JSX এ list render করার নিয়ম কী?
+- key prop কেন দরকার?
+- Actor এবং Singer component কিভাবে কাজ করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. What is List Rendering?
+- React এ list rendering মানে হলো array এর data কে UI তে দেখানো।
+- Array এর প্রতিটি element কে JSX এ convert করে render করা হয়।
+- map() method ব্যবহার করে সহজে list render করা যায়।
+
+2. Why Use map()?
+- map() → array এর প্রতিটি element এর উপর কাজ করে নতুন array return করে।
+- JSX এর মধ্যে map() ব্যবহার করলে প্রতিটি element কে component এ পাঠানো যায়।
+👉 Example:
+actors.map(actor => <Actor actor={actor}></Actor>)
+
+📌 Explanation:
+- actors array এর প্রতিটি নাম Actor component এ পাঠানো হচ্ছে।
+- Actor component সেই নামকে UI তে দেখাচ্ছে।
+
+3. Example Code (App.jsx)
+import './App.css'
+import Actor from './Actor';
+import Singer from './Singer';
+
+function App() {
+  const actors = ['Maha', 'Faha', 'Raha', 'Enna', 'Mina'];
+
+  const singers = [
+    {id: 1, name: 'Dr. Mahfuz', age: 68},
+    {id: 2, name: 'Tahsan', age: 45},
+    {id: 3, name: 'Shuvro Deb', age: 57},
+  ];
+
+  return (
+    <>
+      <h1>React Core Concepts</h1>
+      {
+        singers.map(singer => <Singer key={singer.id} singer={singer}></Singer>)
+      }
+      {
+        actors.map(actor => <Actor actor={actor}></Actor>)
+      }
+    </>
+  )
+}
+export default App;
+
+📌 Explanation:
+- singers array → object list render করছে।
+- actors array → string list render করছে।
+- Singer component এ key prop ব্যবহার করা হয়েছে → unique identity দেয়।
+
+4. Actor Component (Actor.jsx)
+export default function Actor({actor}){
+    return <li>Nayok: {actor}</li>
+}
+
+👉 Output:
+Nayok: Maha  
+Nayok: Faha  
+Nayok: Raha  
+
+📌 Explanation:
+- actor prop → string হিসেবে পাঠানো হয়েছে।
+- Actor component সেই string কে list item হিসেবে render করছে।
+
+5. Singer Component (Singer.jsx)
+import './App.css'
+export default function Singer({singer}){
+    return(
+        <div className='singer'>
+            <h3>Name: {singer.name}</h3>
+            <p>Age: {singer.age}</p>
+        </div>
+    )
+}
+
+👉 Output:
+Name: Dr. Mahfuz  
+Age: 68  
+
+Name: Tahsan  
+Age: 45  
+
+Name: Shuvro Deb  
+Age: 57  
+
+📌 Explanation:
+- singer prop → object হিসেবে পাঠানো হয়েছে।
+- Destructuring করে name এবং age দেখানো হয়েছে।
+
+6. Key Prop in List Rendering
+- key prop React কে প্রতিটি element কে uniquely চিনতে সাহায্য করে।
+- Performance বাড়ায় এবং unnecessary re-rendering কমায়।
+👉 Example:
+singers.map(singer => <Singer key={singer.id} singer={singer}></Singer>)
+
+7. Advantages of List Rendering
+- Dynamic data সহজে UI তে দেখানো যায়।
+- কোড ছোট এবং readable হয়।
+- Component reusable হয়।
+- Large dataset handle করা যায়।
+
+📌 Summary
+- List rendering → array এর data কে UI তে দেখানো।
+- map() → প্রতিটি element কে JSX এ convert করে।
+- Actor component → string data render করছে।
+- Singer component → object data render করছে।
+- key prop → unique identity দিয়ে performance বাড়ায়।
+- List rendering → dynamic, reusable এবং maintainable UI তৈরি করতে সাহায্য করে।
+
+
+
+===============================
+38-9 Module Summary and Recap
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Component কী এবং কেন ব্যবহার করা হয়?
+- JSX কীভাবে কাজ করে?
+- Props কী এবং কিভাবে destructuring করা হয়?
+- Conditional Rendering এর ৬টি পদ্ধতি কী?
+- Array loop করে component render করার নিয়ম কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Component
+- Component হলো React এর ছোট unit → শুধু একটি JavaScript function।
+- Component reusable → একই UI বারবার ব্যবহার করা যায়।
+👉 Example:
+function Book(){ return <p>Book</p>; }
+
+2. JSX
+- JSX = JavaScript XML → HTML-এর মতো syntax যা JavaScript এর মধ্যে লেখা যায়।
+- JSX browser সরাসরি বুঝতে পারে না → Babel compiler এটিকে React.createElement() এ convert করে।
+👉 Example:
+return <h1>Hello React</h1>;
+
+3. Props
+- Props হলো parent থেকে child component এ data পাঠানোর উপায়।
+- Props immutable → child component পরিবর্তন করতে পারে না।
+- Destructuring ব্যবহার করে props সহজে পড়া যায়।
+👉 Example:
+function Book({book}){ return <li>{book.name}</li>; }
+
+4. Conditional Rendering (6 Ways)
+- if statement
+- return null
+- ternary operator (? :)
+- logical AND (&&)
+- logical OR (||)
+- JSX কে variable এ assign করে return করা
+
+👉 Example:
+isDone ? <p>Done</p> : <p>Pending</p>;
+
+5. Looping Through Array and Showing Component
+- Array এর উপর map() ব্যবহার করে প্রতিটি element কে component এ পাঠানো যায়।
+👉 Example:
+books.map(book => <Book key={book.id} book={book}></Book>)
+
+📌 Explanation:
+- books array এর প্রতিটি object Book component এ পাঠানো হচ্ছে।
+- key prop → unique identity দেয়, performance বাড়ায়।
+
+6. Example Code
+
+👉 App.jsx
+import './App.css'
+import Library from './Library';
+
+function App() {
+  const books = [
+    {id: 1, name: 'Physics', price: 250},
+    {id: 2, name: 'Chemistry', price: 350},
+    {id: 3, name: 'Math', price: 255},
+    {id: 4, name: 'Biology', price: 298},
+  ];
+  return (
+    <>
+      <h1>React Core Concepts</h1>
+      <Library books={books}></Library>
+    </>
+  )
+}
+export default App;
+
+👉 Library.jsx
+import Book from './Book'
+
+export default function Library({books}){
+    return(
+        <div>
+            <h2>My National Central Library</h2>
+            <p>Book collection: {books.length}</p>
+            <p>Address: </p>
+            <ul>
+                {books.map(book => <Book key={book.id} book={book}></Book>)}
+            </ul>
+        </div>
+    )
+}
+
+👉 Book.jsx
+export default function Book({book}){
+    return <li>Name: {book.name} Price: {book.price}</li>
+}
+
+📌 Correction:
+- Book.jsx এ ভুল ছিল → Price: {book.name} লেখা হয়েছিল।
+- সঠিক হবে → Price: {book.price}
+
+7. Output
+My National Central Library  
+Book collection: 4  
+Address:  
+
+Name: Physics Price: 250  
+Name: Chemistry Price: 350  
+Name: Math Price: 255  
+Name: Biology Price: 298  
+
+8. Advantages
+- Component → কোড modular এবং reusable হয়।
+- JSX → HTML + JS একসাথে লেখা যায়।
+- Props → dynamic data পাঠানো যায়।
+- Conditional Rendering → শর্ত অনুযায়ী UI পরিবর্তন করা যায়।
+- Looping with map → array data সহজে UI তে দেখানো যায়।
+
+📌 Summary
+- Component হলো React এর ছোট unit।
+- JSX → HTML-এর মতো syntax, Babel এটিকে JS এ convert করে।
+- Props → parent থেকে child এ data পাঠানোর উপায়।
+- Conditional Rendering → ৬টি পদ্ধতিতে করা যায়।
+- Array loop → map() ব্যবহার করে component render করা যায়।
+
+
