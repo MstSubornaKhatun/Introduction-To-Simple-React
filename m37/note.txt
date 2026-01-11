@@ -1,0 +1,631 @@
+===============================
+Module 37: JavaScript You Need to Know for React
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- let, const, var কখন ব্যবহার করতে হয়?
+- কন্ডিশন (>, <, >=, <=, ==, !=, ===, !==, &&, ||) কিভাবে কাজ করে?
+- if-else, if-else if-else কিভাবে লিখতে হয়?
+- Array এর method গুলো কীভাবে কাজ করে?
+- Loop (for, while, for...of, for...in) কিভাবে ব্যবহার করতে হয়?
+- Function কিভাবে declare, call, return করতে হয়?
+- Object declare এবং property access করার নিয়ম কী?
+- Data types (string, number, boolean, null, undefined) কিভাবে কাজ করে?
+- ES6 এর feature গুলো (template string, spread, arrow function, destructuring, default parameter, optional chaining) কিভাবে ব্যবহার করতে হয়?
+- Math, Regex, JSON এর basic method গুলো কীভাবে কাজ করে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Variable Declaration (let, const, var)
+- let → block scoped, re-assign করা যায়।
+- const → block scoped, re-assign করা যায় না।
+- var → function scoped, re-declare করা যায়।
+👉 Example:
+let age = 20;
+const name = "Rahim";
+var city = "Dhaka";
+
+2. Conditions
+- Operators → >, <, >=, <=, ==, !=, ===, !==
+- Logical Operators → && (AND), || (OR)
+👉 Example:
+if(age > 18 && city === "Dhaka") {
+    console.log("Adult in Dhaka");
+}
+
+3. If-Else Statements
+👉 Example (Grading System):
+let marks = 85;
+if(marks >= 90) {
+    console.log("A+");
+} else if(marks >= 80) {
+    console.log("A");
+} else if(marks >= 70) {
+    console.log("B");
+} else {
+    console.log("Fail");
+}
+
+4. Arrays
+- Declare → let arr = [10, 20, 30];
+- Methods:
+  - length → arr.length
+  - index → arr[0]
+  - push → arr.push(40)
+  - pop → arr.pop()
+  - indexOf → arr.indexOf(20)
+  - includes → arr.includes(30)
+  - slice → arr.slice(1, 3)
+  - splice → arr.splice(1, 1)
+  - shift → arr.shift()
+  - unshift → arr.unshift(5)
+  - join → arr.join(",")
+  - reduce → arr.reduce((acc, val) => acc + val, 0)
+👉 Check Array → Array.isArray(arr)
+
+5. Loops
+- for loop → for(let i=0; i<5; i++) {}
+- while loop → while(condition) {}
+- for...of → array এর জন্য।
+- for...in → object এর জন্য।
+
+6. Functions
+- Declare → function add(a, b) { return a+b; }
+- Call → add(5, 10)
+- Return → function sum(a, b) { return a+b; }
+👉 Example:
+function multiply(num) {
+    return num * 2;
+}
+let result = multiply(5);
+console.log(result); // 10
+
+7. Objects
+- Declare → const person = {name: "Rahim", age: 25};
+- Access → person.name, person["age"]
+- Nested → person.friends = ["Karim", "Hena"]
+
+8. Data Types
+- String → "Hello"
+- Number → 10, 10.5
+- Boolean → true/false
+- Null → empty value
+- Undefined → value not assigned
+
+👉 String Methods:
+"Hello".length  
+"Hello".includes("He")  
+"Hello".indexOf("o")  
+"Hello".toUpperCase()  
+"Hello".toLowerCase()  
+"Hello".substring(0, 2)  
+"Hello".concat(" World")
+
+👉 Number:
+parseInt("10")  
+parseFloat("10.5")  
+Number.isInteger(10)  
+NaN → Not a Number
+
+👉 Truthy/Falsy:
+Falsy → 0, "", null, undefined, NaN, false  
+Truthy → সবকিছু truthy, falsy ছাড়া।
+
+9. ES6 Features
+- Template String:
+const user = {name: "Rahim", balance: 100};
+console.log(`User ${user.name} has balance ${user.balance}`);
+
+- Spread Operator:
+const arr = [1, 2, 3];
+const newArr = [...arr, 4];
+const filteredArr = arr.filter(x => x !== 2);
+
+- Arrow Functions:
+const zeroParam = () => 9;
+const oneParam = x => x * 12;
+const twoParam = (a, b) => (a+b)/4;
+const multiLine = (a, b) => {
+    a = a + 5;
+    b = b + 5;
+    return a * b;
+};
+
+- Destructuring:
+const person = {name: "Rahim", balance: 200};
+const {balance} = person;
+
+const numbers = [10, 20, 30];
+const [, balanceValue] = numbers;
+
+- Default Parameter:
+function greet(name="Guest") {
+    console.log(`Hello ${name}`);
+}
+
+- Optional Chaining:
+const user = {profile: {email: "test@gmail.com"}};
+console.log(user?.profile?.email);
+
+10. Standard Methods
+- Math:
+Math.min(10, 20)  
+Math.max(10, 20)  
+Math.ceil(4.2)  
+Math.floor(4.9)  
+Math.abs(-5)  
+Math.round(4.6)  
+Math.random()
+
+- Regex:
+let pattern = /hello/i;
+console.log(pattern.test("Hello World"));
+
+- JSON:
+const obj = {name: "Rahim"};
+const str = JSON.stringify(obj);
+const parsed = JSON.parse(str);
+
+📌 Summary
+- Variable → let, const, var এর ব্যবহার।
+- Condition → comparison এবং logical operators।
+- If-Else → grading system এর মতো উদাহরণ।
+- Array → বিভিন্ন method (push, pop, slice, splice, reduce ইত্যাদি)।
+- Loop → for, while, for...of, for...in।
+- Function → declare, call, return, parameter।
+- Object → declare, access, nested property।
+- Data Types → string, number, boolean, null, undefined।
+- ES6 Features → template string, spread, arrow function, destructuring, default parameter, optional chaining।
+- Standard Methods → Math, Regex, JSON।
+
+
+===============================
+37-1 Six JavaScript Fundamentals You Need to Know
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Variable কিভাবে declare করতে হয় (let, const)?
+- If-Else condition কিভাবে কাজ করে?
+- Array এর method গুলো কীভাবে কাজ করে?
+- Loop (for) কিভাবে ব্যবহার করতে হয়?
+- Function কিভাবে declare, call, return করতে হয়?
+- Object কিভাবে declare এবং property access করতে হয়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Variable (let, const)
+- let → block scoped, re-assign করা যায়।
+- const → block scoped, re-assign করা যায় না।
+👉 Example:
+let name = "SUBORNA";
+name = "SUBORNA KHATUN";
+
+const countryName = "BD";
+
+2. If-Else Condition
+- Comparison operators → >, <, >=, <=
+- Logical operators → && (AND), || (OR)
+👉 Example:
+const num = 40;
+if(num > 20 && num <= 30){
+    console.log("YES");
+} else {
+    console.log("NO");
+}
+
+3. Arrays and Methods
+👉 Declare:
+const friends = ["HERO", "JABBAR", "RATUN", "RAHIM"];
+console.log(friends); // ['HERO', 'JABBAR', 'RATUN', 'RAHIM']
+console.log(friends[1]); // JABBAR
+
+👉 Methods:
+- push → নতুন element যোগ করে।
+friends.push("RAKA");
+console.log(friends); // ['HERO', 'JABBAR', 'RATUN', 'RAHIM', 'RAKA']
+
+- pop → শেষ element remove করে।
+friends.pop();
+console.log(friends); // ['HERO', 'JABBAR', 'RATUN', 'RAHIM']
+
+- unshift → শুরুতে element যোগ করে।
+friends.unshift("FAHA");
+console.log(friends); // ['FAHA', 'HERO', 'JABBAR', 'RATUN', 'RAHIM']
+
+- shift → শুরু থেকে element remove করে।
+friends.shift();
+console.log(friends); // ['HERO', 'JABBAR', 'RATUN', 'RAHIM']
+
+- slice → নির্দিষ্ট range এর copy নেয়।
+console.log(friends.slice(2,4)); // ['RATUN', 'RAHIM']
+
+- splice → নির্দিষ্ট range এর element remove করে।
+console.log(friends.splice(2,3)); // ['RATUN', 'RAHIM']
+
+4. Loop (for)
+👉 Example:
+const friends = ["HERO", "JABBAR", "RATUN", "RAHIM"];
+for (let index = 0; index < friends.length; index++) {
+    const element = friends[index];
+    console.log(element);
+}
+👉 Output:
+HERO  
+JABBAR  
+RATUN  
+RAHIM  
+
+5. Functions
+👉 Example 1 (without return):
+function sum(a, b){
+    const result = a + b;
+    console.log(result);
+}
+sum(); // NaN
+const output = sum(4, 5);
+console.log(output); // undefined
+
+👉 Example 2 (with return):
+function sum(a, b){
+    console.log(...arguments); // 4 5
+    const result = a + b;
+    return result;
+}
+const output = sum(4, 5);
+console.log(output); // 9
+
+👉 Explanation:
+- arguments → function এ pass করা সব parameter।
+- return → function থেকে value ফেরত দেয়।
+
+6. Objects
+👉 Declare:
+const friends = ["PREMA", "HANNA", "RAHA", "SANA"];
+const person = {
+    name: "SUBORNA",
+    age: 10,
+    friends: friends
+};
+console.log(person); // {name: 'SUBORNA', age: 10, friends: Array(4)}
+console.log(person.friends[1]); // HANNA
+
+👉 Update property:
+person.name = "SABANA";
+console.log(person); // {name: 'SABANA', age: 10, friends: Array(4)}
+
+📌 Summary
+- Variable → let, const দিয়ে declare করা হয়।
+- If-Else → condition check করার জন্য।
+- Array → push, pop, shift, unshift, slice, splice method ব্যবহার করা হয়।
+- Loop → for দিয়ে array iterate করা যায়।
+- Function → declare, call, return, arguments ব্যবহার করা যায়।
+- Object → declare, property access এবং update করা যায়।
+
+
+===============================
+37-2 Template String, Arrow Function, Spread Operator
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Template string কী এবং কিভাবে ব্যবহার করা হয়?
+- Arrow function কীভাবে কাজ করে?
+- Spread operator (...) কীভাবে কাজ করে?
+- Rest parameter এবং spread এর মধ্যে পার্থক্য কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Template String
+- Backtick (`) ব্যবহার করে dynamic string তৈরি করা যায়।
+- Variable বা object property string এর মধ্যে বসানো যায়।
+👉 Example:
+const fName = "SUBORNA";
+const lName = "KHATUN";
+console.log(`I am MST. ${fName} ${lName}`);
+// Output: I am MST. SUBORNA KHATUN
+
+2. Arrow Function
+- Short syntax এ function declare করার জন্য ব্যবহার হয়।
+- arguments object arrow function এ পাওয়া যায় না।
+👉 Example (Normal Function):
+function sum(){
+    console.log(arguments); // কাজ করে
+}
+👉 Example (Arrow Function):
+const sum = (...rest) => {
+    console.log(rest); // কাজ করে কারণ rest parameter ব্যবহার করা হয়েছে
+}
+sum(1,2,3); // Output: [1, 2, 3]
+
+👉 Single Line Arrow Function:
+const sum = (a, b, c) => a + b + c;
+console.log(sum(1,2,3)); // Output: 6
+
+👉 Multi Line Arrow Function:
+const sum = (a, b, c) => {
+    const add = a + b + c;
+    return add;
+};
+const result = sum(1,2,3);
+console.log(result); // Output: 6
+
+3. Spread Operator (...)
+- Array বা object কে copy করার জন্য ব্যবহার হয়।
+- Array এর element গুলোকে আলাদা করে দেখায়।
+👉 Example:
+const numbers = [1,2,3,4,5,6];
+console.log(...numbers); 
+// Output: 1 2 3 4 5 6
+
+👉 Copy এবং নতুন element যোগ করা:
+const newNumbers = [...numbers, 10, 100];
+console.log(newNumbers); 
+// Output: [1, 2, 3, 4, 5, 6, 10, 100]
+
+4. Rest Parameter vs Spread Operator
+- Rest → function parameter এ multiple value collect করে array বানায়।
+- Spread → array/object কে আলাদা করে expand করে।
+
+📌 Summary
+- Template String → backtick দিয়ে dynamic string তৈরি হয়।
+- Arrow Function → short syntax function, arguments object নেই, rest parameter ব্যবহার করতে হয়।
+- Spread Operator → array/object copy বা expand করার জন্য ব্যবহার হয়।
+- Rest vs Spread → Rest parameter value collect করে, Spread value expand করে।
+
+
+===============================
+37-3 Array Methods: map, filter, find, forEach
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Array এর উপর map, filter, find, forEach কিভাবে কাজ করে?
+- কোন method কোন কাজের জন্য ব্যবহার হয়?
+- প্রতিটি method এর উদাহরণ কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. map()
+- কাজ: প্রতিটি element এর উপর কাজ করে নতুন array return করে।
+- Example:
+const result = products.map(product => product.price);
+console.log(result);
+// Output: [2000, 5000, 25000, 3000, 2000]
+
+👉 এখানে প্রতিটি product এর price নিয়ে নতুন array তৈরি হয়েছে।
+
+2. forEach()
+- কাজ: প্রতিটি element এর উপর কাজ করে কিন্তু নতুন array return করে না।
+- Example:
+products.forEach(product => console.log(product.name));
+👉 Output:
+redmi  
+sam  
+apple1  
+apple2  
+redmi2  
+
+👉 এখানে প্রতিটি product এর name console এ print হয়েছে।
+
+3. filter()
+- কাজ: শর্ত অনুযায়ী matching element গুলো return করে নতুন array বানায়।
+- Example:
+const result = products.filter(product => product.brand === "apple");
+console.log(result);
+// Output: [{name: "apple1", brand: "apple", price: 25000, color: "gold"}, 
+//          {name: "apple2", brand: "apple", price: 3000, color: "gold"}]
+
+👉 এখানে শুধুমাত্র brand === "apple" product গুলো return হয়েছে।
+
+4. find()
+- কাজ: শর্ত অনুযায়ী প্রথম matching element return করে।
+- Example:
+const result = products.find(product => product.name === "apple1");
+console.log(result);
+// Output: {name: "apple1", brand: "apple", price: 25000, color: "gold"}
+
+👉 এখানে শুধুমাত্র প্রথম product যেটার name === "apple1" সেটি return হয়েছে।
+
+📌 Summary
+- map → প্রতিটি element এর উপর কাজ করে নতুন array return করে।
+- forEach → প্রতিটি element এর উপর কাজ করে কিন্তু নতুন array return করে না।
+- filter → শর্ত অনুযায়ী matching element গুলো return করে নতুন array বানায়।
+- find → শর্ত অনুযায়ী প্রথম matching element return করে।
+
+
+===============================
+37-5 JSON, Fetch, Keys, Values, Array Add or Remove Using Dots
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- JSON.stringify এবং JSON.parse কীভাবে কাজ করে?
+- fetch দিয়ে data কিভাবে আনা যায়?
+- Object.keys() এবং Object.values() এর কাজ কী?
+- Spread operator দিয়ে array এ নতুন data যোগ বা remove করার নিয়ম কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. JSON (JavaScript Object Notation)
+- JSON.stringify() → object কে string এ convert করে।
+- JSON.parse() → string কে আবার object এ convert করে।
+
+👉 Example:
+const person = {
+    name: "Hanna",
+    age: 10,
+    friends: ["Raha", "Maha", "Faha"],
+    family: {
+        fatherName: "Kolim Uddin",
+        motherName: "Taslima Begom"
+    }
+};
+
+const jsonData = JSON.stringify(person);
+console.log(jsonData);
+// Output: {"name":"Hanna","age":10,"friends":["Raha","Maha","Faha"],"family":{"fatherName":"Kolim Uddin","motherName":"Taslima Begom"}}
+
+const planData = JSON.parse(jsonData);
+console.log(planData);
+// Output: {name: 'Hanna', age: 10, friends: Array(3), family: {…}}
+
+2. Fetch API
+- fetch() → server থেকে data আনার জন্য ব্যবহার হয়।
+- .then(res => res.json()) → response কে JSON এ convert করে।
+- .then(data => console.log(data)) → data console এ দেখায়।
+
+👉 Example:
+fetch("url")
+.then(res => res.json())
+.then(data => console.log(data));
+
+3. Object Keys and Values
+- Object.keys() → object এর সব property নাম array আকারে দেয়।
+- Object.values() → object এর সব property value array আকারে দেয়।
+
+👉 Example:
+const person = {
+    name: "Faha Raha",
+    age: 10,
+    friends: ["Tashlima", "Chaity", "Mahiya"],
+    finally: {
+        fatherName: "Jalal Mia",
+        motherName: "Jorina Khatun"
+    }
+};
+
+const keys = Object.keys(person);
+console.log(keys); // ['name', 'age', 'friends', 'finally']
+
+const values = Object.values(person);
+console.log(values); // ['Faha Raha', 10, Array(3), {…}]
+
+4. Array Add or Remove Using Spread Operator
+- Spread operator (...) → array copy করে নতুন element যোগ করা যায়।
+- filter() → শর্ত অনুযায়ী element remove করা যায়।
+
+👉 Example:
+const products = [
+    {name: "redmi", brand: "xioami", price: 2000, color: "black"},
+    {name: "sam", brand: "sumsung", price: 5000, color: "white"},
+    {name: "apple1", brand: "apple", price: 25000, color: "gold"},
+    {name: "apple2", brand: "apple", price: 3000, color: "gold"},
+    {name: "redmi2", brand: "xioami", price: 2000, color: "black"},
+];
+
+const newData = {
+    name: "walton",
+    brand: "walton",
+    price: 3000,
+    color: "gray"
+};
+
+👉 Add new product:
+const newArray = [...products, newData];
+console.log(newArray);
+// Output: products array + walton object
+
+👉 Remove product (brand !== "xiaomi"):
+const remainingProducts = products.filter(p => p.brand !== "xiaomi");
+console.log(remainingProducts);
+
+👉 Add new product after filter:
+const newArray2 = [...remainingProducts, newData];
+console.log(newArray2);
+
+📌 Summary
+- JSON.stringify → object কে string এ convert করে।
+- JSON.parse → string কে object এ convert করে।
+- fetch → server থেকে data আনার জন্য ব্যবহার হয়।
+- Object.keys → object এর property নাম array আকারে দেয়।
+- Object.values → object এর property value array আকারে দেয়।
+- Spread operator → array copy করে নতুন element যোগ করা যায়।
+- filter → শর্ত অনুযায়ী array থেকে element remove করা যায়।
+
+
+===============================
+37-6 (Advanced) Truthy, Falsy, Ternary Operator, Shortcut AND/OR
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- JavaScript এ truthy এবং falsy value কী কী?
+- Ternary operator কিভাবে কাজ করে?
+- Shortcut AND (&&) এবং OR (||) কিভাবে কাজ করে?
+- Type coercion (string ↔ number) কিভাবে হয়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Truthy এবং Falsy Values
+- Falsy Values → 0, -0, "", false, null, undefined  
+- Truthy Values → "sadia", 4343, {}, [], true  
+
+👉 Explanation:  
+Falsy মানগুলো condition এ false হিসেবে গণ্য হয়। Truthy মানগুলো সবসময় true হিসেবে গণ্য হয়।
+
+2. If-Else দিয়ে Truthy/Falsy Check
+👉 Example:
+const test = "";
+if (test){
+    console.log("its truthy");
+} else {
+    console.log("its falsy");
+}
+// Output: its falsy
+
+👉 Explanation:  
+Empty string ("") হলো falsy, তাই else block execute হয়েছে।
+
+3. Ternary Operator
+👉 Example:
+const test = "";
+test ? console.log("its truthy") : console.log("its falsy");
+// Output: its falsy
+
+👉 Another Example:
+const num = 40;
+const result = (num >= 10 && num < 20) ? "true" : "false";
+console.log(result);
+// Output: false
+
+👉 Explanation:  
+Ternary operator → condition ? trueValue : falseValue  
+এটি shorthand if-else হিসেবে কাজ করে।
+
+4. Shortcut AND (&&) এবং OR (||)
+👉 Example:
+const isActive = false; 
+const showUser = () => console.log("show user");
+const hideUser = () => console.log("hide user");
+
+// isActive ? showUser() : hideUser();
+
+isActive && showUser(); // Output: কিছুই হবে না কারণ isActive = false
+isActive || hideUser(); // Output: hide user
+
+👉 Explanation:  
+- && → condition true হলে পরের অংশ execute হয়।  
+- || → condition false হলে পরের অংশ execute হয়।  
+
+5. Type Coercion (Implicit Conversion)
+👉 Example 1:
+let num = 10;
+const result = 10 + "";
+console.log(typeof result); 
+// Output: string
+
+👉 Explanation:  
+Number + "" → string এ convert হয়।
+
+👉 Example 2:
+let num2 = "10";
+const result2 = num2 - 2;
+console.log(typeof result2);
+// Output: number
+
+👉 Explanation:  
+String - Number → string কে number এ convert করে।
+
+📌 Summary
+- Falsy Values → 0, -0, "", false, null, undefined  
+- Truthy Values → সবকিছু truthy, falsy ছাড়া।  
+- Ternary Operator → shorthand if-else।  
+- && → condition true হলে execute হয়।  
+- || → condition false হলে execute হয়।  
+- Type Coercion → JavaScript স্বয়ংক্রিয়ভাবে string ↔ number convert করে।  
