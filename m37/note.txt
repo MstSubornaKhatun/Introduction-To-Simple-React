@@ -629,3 +629,156 @@ String - Number → string কে number এ convert করে।
 - && → condition true হলে execute হয়।  
 - || → condition false হলে execute হয়।  
 - Type Coercion → JavaScript স্বয়ংক্রিয়ভাবে string ↔ number convert করে।  
+
+
+
+===============================
+37-7 Explore Local Storage and Session Storage with JSON
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Local Storage এবং Session Storage কীভাবে কাজ করে?
+- Object কে Local Storage এ কিভাবে save করতে হয়?
+- JSON.stringify এবং JSON.parse এর কাজ কী?
+- Local Storage থেকে data কিভাবে পড়তে হয়?
+- Local Storage clear করার নিয়ম কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Local Storage vs Session Storage
+- Local Storage → data browser এ save হয়, browser বন্ধ করলেও data থাকে।
+- Session Storage → data শুধু session পর্যন্ত থাকে, browser বন্ধ করলে data মুছে যায়।
+👉 দুটোই key-value pair আকারে data store করে।
+
+2. Problem with Direct Object Storage
+- localStorage.setItem(key, object) দিলে → [object Object] হিসেবে save হয়।
+- Object কে সরাসরি save করা যায় না।
+👉 Solution → JSON.stringify() দিয়ে object কে string এ convert করতে হবে।
+
+3. Save Object in Local Storage
+👉 Example:
+const handleAddToStorage = () => {
+    const name = document.getElementById("name").value;
+    const id = document.getElementById("id").value;
+
+    const data = {id, name};
+    console.log(data); 
+    // Output: {id: '32', name: 'namim'}
+
+    // Wrong way → localStorage.setItem(id, data) // [object Object]
+    // Correct way:
+    localStorage.setItem(id, JSON.stringify(data)); 
+    // Output: {"id":"323","name":"nafi"}
+};
+
+📌 Explanation:
+- JSON.stringify(data) → object কে string এ convert করে।
+- localStorage.setItem(id, string) → Local Storage এ save করে।
+
+4. Get Object from Local Storage
+👉 Example:
+const storedItem = localStorage.getItem("434");
+console.log(JSON.parse(storedItem));
+
+📌 Explanation:
+- localStorage.getItem(key) → string return করে।
+- JSON.parse(string) → string কে আবার object এ convert করে।
+
+5. Clear Local Storage
+👉 Example:
+const handleClear = () => {
+    localStorage.clear();
+};
+
+📌 Explanation:
+- localStorage.clear() → সব data মুছে দেয়।
+
+6. Session Storage Example (Similar to Local Storage)
+👉 Example:
+sessionStorage.setItem("user", JSON.stringify({id: 1, name: "Rahim"}));
+const user = JSON.parse(sessionStorage.getItem("user"));
+console.log(user); 
+// Output: {id: 1, name: "Rahim"}
+
+📌 Explanation:
+- sessionStorage → শুধু session পর্যন্ত data রাখে।
+- JSON.stringify() এবং JSON.parse() একইভাবে কাজ করে।
+
+📌 Summary
+- Local Storage → browser এ data save হয়, browser বন্ধ করলেও থাকে।
+- Session Storage → শুধু session পর্যন্ত data থাকে।
+- Object save করতে হলে → JSON.stringify() দিয়ে string এ convert করতে হয়।
+- Object পড়তে হলে → localStorage.getItem() দিয়ে data নিয়ে JSON.parse() দিয়ে আবার object এ convert করতে হয়।
+- localStorage.clear() → সব data মুছে দেয়।
+
+
+
+===============================
+37-8 Dot vs Bracket Notation
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Object property access করার জন্য dot notation এবং bracket notation এর মধ্যে পার্থক্য কী?
+- কখন dot notation ব্যবহার করতে হয়?
+- কখন bracket notation ব্যবহার করতে হয়?
+- Special case (numeric key বা dynamic key) কিভাবে handle করতে হয়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Dot Notation
+- Object property access করার সবচেয়ে সাধারণ পদ্ধতি।
+- সরাসরি property নাম ব্যবহার করা হয়।
+👉 Example:
+const person = {
+    name: "Hanna",
+    age: 10,
+    friends: ["Faha", "Raha"],
+    salary: 100
+};
+
+const heroName = person.name;
+console.log(heroName); 
+// Output: Hanna
+
+📌 Explanation:
+- এখানে person object এর name property কে dot notation দিয়ে access করা হয়েছে।
+
+2. Bracket Notation
+- Property নামকে string বা variable আকারে ব্যবহার করা যায়।
+- Numeric key বা special character থাকলে bracket notation ব্যবহার করতে হয়।
+👉 Example:
+const person = {
+    name: "Hanna",
+    age: 10,
+    friends: ["Faha", "Raha"],
+    salary: 100,
+    10: "secret code"
+};
+
+const heroSecret = person[10];
+console.log(heroSecret); 
+// Output: secret code
+
+📌 Explanation:
+- এখানে property key হলো সংখ্যা (10), তাই dot notation কাজ করবে না।
+- Bracket notation দিয়ে property access করা হয়েছে।
+
+3. Dynamic Property Access
+👉 Example:
+const key = "salary";
+console.log(person[key]); 
+// Output: 100
+
+📌 Explanation:
+- Bracket notation ব্যবহার করলে variable এর মান দিয়ে property access করা যায়।
+- Dot notation এ variable ব্যবহার করা যায় না।
+
+4. Advantages
+- Dot Notation → সহজ এবং readable।
+- Bracket Notation → flexible, dynamic key বা numeric key handle করতে পারে।
+
+📌 Summary
+- Dot Notation → সাধারণ property access করার জন্য ব্যবহার হয় (person.name)।
+- Bracket Notation → dynamic key, numeric key বা special character property access করার জন্য ব্যবহার হয় (person["key"], person[10])।
+- Dot notation সহজ, কিন্তু bracket notation বেশি flexible।
+
