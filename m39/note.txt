@@ -560,3 +560,174 @@ Friends: 10
 - Output → User: 10, Friends: 10।
 
 
+===============================
+39-7 (Recap) Load Dynamic Data Using async/await
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React এ dynamic data কিভাবে load করা যায়?
+- async/await দিয়ে API call করার নিয়ম কী?
+- Suspense এবং fallback কীভাবে কাজ করে?
+- use() hook এর ব্যবহার কী?
+- Users, Friends, এবং Posts component এ data কিভাবে render হচ্ছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Dynamic Data Loading
+- React এ dynamic data load করার জন্য API call ব্যবহার করা হয়।
+- fetch() → API থেকে data আনার জন্য।
+- async/await → asynchronous code সহজে পড়ার মতো করে লেখা যায়।
+👉 Example:
+const fetchPosts = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  return res.json();
+}
+
+2. Suspense and Fallback
+- Suspense → asynchronous component load করার সময় fallback UI দেখায়।
+- fallback → loading message বা অন্য UI।
+👉 Example:
+<Suspense fallback={<h3>Loading.....</h3>}>
+   <Users fetchUsers={fetchUsers}></Users>
+</Suspense>
+
+📌 Explanation:
+- Users component load হওয়ার আগে fallback message দেখাবে।
+
+3. use() Hook
+- use() হলো React এর নতুন hook যা promise resolve করে data return করে।
+- Suspense এর সাথে কাজ করে → promise resolve না হওয়া পর্যন্ত fallback দেখায়।
+👉 Example:
+const users = use(fetchUsers);
+
+📌 Explanation:
+- fetchUsers promise resolve হলে users data পাওয়া যায়।
+
+4. Example Project Code
+
+👉 App.jsx
+import { Suspense } from 'react'
+import './App.css'
+import Users from './Users'
+import Friends from './Friends'
+import Posts from './Posts'
+
+const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
+  .then(res => res.json());
+
+const fetchFriends = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+  return res.json();
+}
+
+const fetchPosts = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  return res.json();
+}
+
+function App() {
+  const friendsPromise = fetchFriends();
+  const postsPromise = fetchPosts();
+
+  return (
+    <>
+      <h1>Vite + React</h1>
+      <Suspense fallback={<h3>Loading.....</h3>}>
+        <Users fetchUsers={fetchUsers}></Users>
+      </Suspense>
+      <Suspense fallback={<h3>Friends are coming for treat</h3>}>
+        <Friends friendsPromise={friendsPromise}></Friends>
+      </Suspense>
+      <Suspense fallback={<h4>Posts are coming.......</h4>}>
+        <Posts postsPromise={postsPromise}></Posts>
+      </Suspense>
+    </>
+  )
+}
+export default App;
+
+👉 Users.jsx
+import { use } from "react"
+export default function Users({fetchUsers}){
+  const users = use(fetchUsers);
+  return (
+    <div className="card">
+      <h3>User: {users.length}</h3>
+    </div>
+  )
+}
+
+👉 Friends.jsx
+import { use } from "react"
+import Friend from "./Friend";
+export default function Friends({friendsPromise}){
+  const friends = use(friendsPromise);
+  return (
+    <div className="card">
+      <h3>Friends: {friends.length}</h3>
+      {friends.map(friend => <Friend key={friend.id} friend={friend}></Friend>)}
+    </div>
+  )
+}
+
+👉 Friend.jsx
+export default function Friend({friend}){
+  const {name, email, phone} = friend;
+  return (
+    <div className="card">
+      <h4>Name: {name}</h4>
+      <p>Email: {email}</p>
+      <p>Phone: {phone}</p>
+    </div>
+  )
+}
+
+👉 Posts.jsx
+import { use } from "react"
+import Post from "./Post"
+export default function Posts({postsPromise}){
+  const posts = use(postsPromise);
+  return (
+    <div className="card">
+      <h2>All posts are here {posts.length}</h2>
+      {posts.map(post => <Post key={post.id} post={post}></Post>)}
+    </div>
+  )
+}
+
+👉 Post.jsx
+export default function Post({post}){
+  return (
+    <div className="card">
+      <h5>{post.title}</h5>
+      <p>{post.body}</p>
+    </div>
+  )
+}
+
+5. Output
+User: 10  
+Friends: 10  
+Name: Leanne Graham  
+Email: Sincere@april.biz  
+Phone: 1-770-736-8031 x56442  
+
+All posts are here 100  
+sunt aut facere repellat provident occaecati excepturi optio reprehenderit  
+quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto  
+
+6. Advantages
+- async/await → asynchronous code সহজে পড়া যায়।
+- Suspense → fallback UI দেখায় যতক্ষণ না data আসে।
+- use() → promise resolve করে সহজে data ব্যবহার করা যায়।
+- Component-based structure → Users, Friends, Posts আলাদা আলাদা data handle করছে।
+- কোড clean, modular এবং readable হয়।
+
+📌 Summary
+- Dynamic data load → async/await দিয়ে API call।
+- Suspense → fallback UI দেখায় যতক্ষণ না data আসে।
+- use() hook → promise resolve করে data return করে।
+- Users, Friends, এবং Posts component API data render করছে।
+- Output → User: 10, Friends: 10, Posts: 100।
+
+
