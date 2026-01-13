@@ -846,3 +846,135 @@ Clementina Dubuque
 - Dependency array [] → শুধু প্রথমবার render হলে API call হবে।
 
 
+===============================
+39-9 Thinking in React Way and Homework
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React way of thinking কী?
+- UI তৈরি করার সময় কোন ধাপগুলো অনুসরণ করতে হয়?
+- কোন data state হবে আর কোনটা হবে না?
+- State কোথায় রাখা উচিত?
+- Inverse data flow কীভাবে কাজ করে?
+- React application এর মূল কাজগুলো কী কী?
+- Homework tasks: Counter, Show/Hide, API Fetching
+- useState, useEffect এর ধারণা
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Thinking in React Way
+- React এ UI তৈরি করার সময় component-based চিন্তা করতে হয়।
+- প্রতিটি UI element কে ছোট ছোট reusable component এ ভাগ করতে হয়।
+- Data flow → parent থেকে child এ props, child থেকে parent এ event।
+
+2. Start with the Mockup
+- প্রথমে UI এর mockup তৈরি করতে হয়।
+- Mockup → static design যা পরে React component এ রূপান্তরিত হয়।
+- JSON API → dynamic data এর source।
+
+3. Step 1: Break the UI into Component Hierarchy
+- UI কে ছোট ছোট অংশে ভাগ করতে হয়।
+- প্রতিটি অংশ → আলাদা component।
+👉 Example: SearchBar, ProductTable, ProductRow ইত্যাদি।
+
+4. Step 2: Build a Static Version in React
+- Static version → শুধু props ব্যবহার করে data দেখানো।
+- কোনো state বা interactivity থাকবে না।
+- Component গুলো একে অপরের সাথে nested থাকবে।
+
+5. Step 3: Find the Minimal but Complete Representation of UI State
+- State → এমন data যা সময়ের সাথে পরিবর্তন হয়।
+- Props → parent থেকে আসে, immutable।
+👉 Example:
+- Search text → state
+- Checkbox value → state
+- Product list (API থেকে আসা data) → props হিসেবে পাঠানো যায়।
+
+📌 Rule: শুধুমাত্র পরিবর্তনশীল data কে state হিসেবে রাখতে হবে।
+
+6. Step 4: Identify Where Your State Should Live
+- State কোথায় রাখা হবে তা নির্ধারণ করতে হয়।
+- 3 Things to Consider:
+  1. কোন component state ব্যবহার করবে?
+  2. কোন component state পরিবর্তন করবে?
+  3. State কোথায় রাখা হলে data flow সহজ হবে?
+
+👉 সাধারণত state parent component এ রাখা হয় এবং props দিয়ে child এ পাঠানো হয়।
+
+7. Step 5: Add Inverse Data Flow
+- Child component থেকে parent এ data পাঠানোর জন্য event ব্যবহার করা হয়।
+- Parent state update করে → UI পুনরায় render হয়।
+👉 Example:
+<SearchBar onSearchChange={setSearchText}></SearchBar>
+
+📌 Explanation:
+- Child → event trigger করে।
+- Parent → state update করে।
+- Updated state → আবার child এ props হিসেবে যায়।
+
+8. React Application Workflow
+1. Event trigger → user interaction (click, input, change)
+2. State → পরিবর্তনশীল data যা UI কে dynamic করে
+3. Data load from API → fetch বা async/await দিয়ে
+4. Loop through to display → map() ব্যবহার করে list render করা
+5. Key props → list rendering এ unique identity দেয়, performance বাড়ায়
+
+---
+
+📌 Homework Tasks
+
+👉 Task 1: State and Event Handling
+- Build a counter app:
+  - Button → increase count by 1
+  - Button → decrease count by 1
+  - Button → reset count to 0
+  - Display count dynamically
+
+👉 Task 2: useState and Conditional Rendering
+- Build Show/Hide text app:
+  - useState দিয়ে visibility manage করা
+  - Button → toggle between "Show" and "Hide"
+  - Visible হলে → "Hello, React Learner!"
+  - Hidden হলে → কিছুই দেখাবে না
+
+👉 Task 3: API Data Fetching with useEffect
+- Build user list app:
+  - Fetch data from JSONPlaceholder API
+  - Display → user name, company name, city
+  - Show loading state while fetching
+  - Show error message if API fails
+
+---
+
+📌 Conceptual Questions
+
+1. What is useState, and how does it work?
+- useState হলো React hook যা state manage করে।
+- Syntax: const [state, setState] = useState(initialValue);
+- state → বর্তমান মান, setState → state update করার function।
+- State change হলে component পুনরায় render হয়।
+
+2. What is useEffect, and when should you use it?
+- useEffect হলো React hook যা side-effect handle করে।
+- Side-effect → API call, event listener, DOM manipulation।
+- Syntax: useEffect(() => { ... }, [dependencies]);
+- Dependency array [] → শুধু প্রথমবার render হলে effect চালু হবে।
+
+3. Why is Thinking in React Important?
+- Component-based design → কোড modular এবং reusable হয়।
+- Minimal state → UI predictable হয়।
+- Data flow → সহজে বোঝা যায়।
+- Inverse data flow → child থেকে parent এ communication সম্ভব।
+- React way → scalable এবং maintainable application তৈরি করা যায়।
+
+📌 Summary
+- React way of thinking → component-based design।
+- Step 1 → UI কে component hierarchy তে ভাগ করা।
+- Step 2 → static version তৈরি করা।
+- Step 3 → minimal state নির্ধারণ করা।
+- Step 4 → state কোথায় রাখা উচিত তা নির্ধারণ করা।
+- Step 5 → inverse data flow যোগ করা।
+- Homework → Counter, Show/Hide, API Fetching।
+- useState → state manage করে।
+- useEffect → side-effect handle করে।
+- Thinking in React → scalable, maintainable, predictable UI তৈরি করতে সাহায্য করে।

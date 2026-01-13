@@ -17,3 +17,11 @@ const loadData = async()=>{
 
 
 */ 
+/*
+1. event tigger
+2 .state
+3. data load from API
+4. loop through to display
+5. why we use key props
+
+*/
