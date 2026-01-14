@@ -1,0 +1,154 @@
+===============================
+Module 40: Simple React Rest Countries
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React এর মূল ছয়টি জিনিস কী?
+- JSX কীভাবে কাজ করে?
+- Component কী এবং কেন দরকার?
+- Props কীভাবে data pass করে?
+- Events কীভাবে handle করা হয়?
+- State এবং Effect এর ভূমিকা কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. JSX
+- JSX = JavaScript XML → HTML-এর মতো syntax যা JavaScript এর মধ্যে লেখা যায়।
+- JSX browser সরাসরি বুঝতে পারে না → Babel এটিকে React.createElement() এ convert করে।
+👉 Example:
+return <h1>Hello React</h1>;
+
+2. Component
+- Component হলো React এর ছোট unit → শুধু একটি JavaScript function।
+- Component reusable → একই UI বারবার ব্যবহার করা যায়।
+👉 Example:
+function Country(){ return <p>Bangladesh</p>; }
+
+3. Props
+- Props হলো parent থেকে child component এ data পাঠানোর উপায়।
+- Props immutable → child component পরিবর্তন করতে পারে না।
+👉 Example:
+<Country name="Bangladesh"></Country>
+function Country({name}){ return <p>{name}</p>; }
+
+4. Events
+- Events হলো user interaction (click, input, submit ইত্যাদি)।
+- React এ event handler camelCase attribute দিয়ে function reference হিসেবে pass করা হয়।
+👉 Example:
+<button onClick={handleClick}>Click Me</button>
+
+5. State
+- State হলো React component এর ভিতরের data যা সময়ের সাথে পরিবর্তন হতে পারে।
+- State change হলে React component পুনরায় render হয়।
+👉 Example:
+const [count, setCount] = useState(0);
+
+6. Effect
+- useEffect হলো React এর hook যা side-effect handle করতে ব্যবহৃত হয়।
+- Side-effect → API call, event listener, DOM manipulation।
+👉 Example:
+useEffect(() => {
+   fetch('https://restcountries.com/v3.1/all')
+     .then(res => res.json())
+     .then(data => setCountries(data));
+}, []);
+
+7. Side Things (Extra)
+- Key props → list rendering এ unique identity দেয়।
+- Conditional rendering → শর্ত অনুযায়ী UI পরিবর্তন করা যায়।
+- Map() → array loop করে component render করা যায়।
+
+📌 Summary
+- React এর মূল ছয়টি জিনিস → JSX, Component, Props, Events, State, Effect।
+- এগুলো দিয়েই পুরো সাইট তৈরি হয়।
+- JSX → HTML-এর মতো syntax।
+- Component → ছোট unit, reusable।
+- Props → parent থেকে child এ data পাঠানো।
+- Events → user interaction handle করা।
+- State → পরিবর্তনশীল data।
+- Effect → side-effect যেমন API call।
+- Extra → key props, conditional rendering, map()।
+
+
+===============================
+40-1 Module Introduction: Load Countries Using Promise and API
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React project কিভাবে তৈরি করতে হয়?
+- Rest Countries API কীভাবে ব্যবহার করা যায়?
+- React component declare করার দুইটি উপায় কী?
+- Arrow function কেন best practice?
+- Promise দিয়ে API data কিভাবে load করা যায়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Create React Project
+👉 Command:
+npm create vite@latest react-world-on-the-go -- --template react
+
+📌 Explanation:
+- Vite → fast build tool, React project তৈরি করতে ব্যবহার হয়।
+- Project name → react-world-on-the-go।
+- Template → React project structure তৈরি হবে।
+
+2. Rest Countries API
+👉 API URL:
+https://restcountries.com/v3.1/all
+
+📌 Explanation:
+- এই API থেকে সব দেশের data পাওয়া যায়।
+- Data → name, capital, population, flags ইত্যাদি।
+
+3. Component Declaration
+👉 Normal Function:
+function Countries() {
+  return (
+    <div>
+    </div>
+  )
+}
+
+👉 Arrow Function:
+const Countries = () => {
+  return (
+    <div>
+    </div>
+  )
+}
+
+📌 Explanation:
+- দুইভাবে component declare করা যায়।
+- Arrow function → concise, modern JavaScript style।
+- Best practice → arrow function ব্যবহার করা।
+
+4. Promise দিয়ে API Call
+👉 Example:
+fetch("https://restcountries.com/v3.1/all")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+📌 Explanation:
+- fetch() → API থেকে data আনে।
+- .then() → promise resolve হলে data পাওয়া যায়।
+- console.log(data) → data দেখতে পাওয়া যায়।
+
+5. React Extension Pack
+- VS Code এ React Extension Pack install করলে development সহজ হয়।
+- Features → syntax highlighting, snippets, linting, auto-completion।
+
+6. Advantages
+- Vite দিয়ে project setup দ্রুত হয়।
+- Rest Countries API → free এবং সহজে ব্যবহারযোগ্য।
+- Arrow function → clean এবং readable code।
+- Promise → asynchronous data handle করা যায়।
+
+📌 Summary
+- React project setup → vite দিয়ে।
+- API → Rest Countries থেকে data আনা যায়।
+- Component declare → normal function বা arrow function।
+- Arrow function → best practice।
+- Promise → asynchronous API data load করার জন্য।
+- React Extension Pack → development সহজ করে।
+
+
