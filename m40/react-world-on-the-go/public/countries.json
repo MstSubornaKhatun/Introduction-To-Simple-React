@@ -1,0 +1,4006 @@
+[
+  {
+    "name": {
+      "common": "Afghanistan",
+      "official": "Republic of Afghanistan"
+    },
+    "cca2": "QM",
+    "cca3": "SXI",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Afghanistan City"
+    ],
+    "population": 469265724,
+    "area": 3470245,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SXI": {
+        "name": "Afghanistan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/qm.png",
+      "svg": "https://flagcdn.com/qm.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Albania",
+      "official": "Republic of Albania"
+    },
+    "cca2": "AB",
+    "cca3": "MUC",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Albania City"
+    ],
+    "population": 1033934195,
+    "area": 3592948,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "MUC": {
+        "name": "Albania Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ab.png",
+      "svg": "https://flagcdn.com/ab.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Algeria",
+      "official": "Republic of Algeria"
+    },
+    "cca2": "VY",
+    "cca3": "UEB",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Algeria City"
+    ],
+    "population": 1491956936,
+    "area": 4641349,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "UEB": {
+        "name": "Algeria Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/vy.png",
+      "svg": "https://flagcdn.com/vy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Andorra",
+      "official": "Republic of Andorra"
+    },
+    "cca2": "DR",
+    "cca3": "DJT",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Andorra City"
+    ],
+    "population": 575799656,
+    "area": 1271137,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "DJT": {
+        "name": "Andorra Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/dr.png",
+      "svg": "https://flagcdn.com/dr.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Angola",
+      "official": "Republic of Angola"
+    },
+    "cca2": "EG",
+    "cca3": "UTX",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Angola City"
+    ],
+    "population": 395030231,
+    "area": 3528877,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "UTX": {
+        "name": "Angola Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/eg.png",
+      "svg": "https://flagcdn.com/eg.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Argentina",
+      "official": "Republic of Argentina"
+    },
+    "cca2": "ND",
+    "cca3": "ZWH",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Argentina City"
+    ],
+    "population": 238955111,
+    "area": 1600525,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ZWH": {
+        "name": "Argentina Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/nd.png",
+      "svg": "https://flagcdn.com/nd.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Armenia",
+      "official": "Republic of Armenia"
+    },
+    "cca2": "EY",
+    "cca3": "EMF",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Armenia City"
+    ],
+    "population": 568844909,
+    "area": 1925025,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "EMF": {
+        "name": "Armenia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ey.png",
+      "svg": "https://flagcdn.com/ey.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Australia",
+      "official": "Republic of Australia"
+    },
+    "cca2": "CY",
+    "cca3": "KAS",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Australia City"
+    ],
+    "population": 534980866,
+    "area": 2451186,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "KAS": {
+        "name": "Australia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cy.png",
+      "svg": "https://flagcdn.com/cy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Austria",
+      "official": "Republic of Austria"
+    },
+    "cca2": "NP",
+    "cca3": "SYH",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Austria City"
+    ],
+    "population": 1326797513,
+    "area": 1920206,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SYH": {
+        "name": "Austria Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/np.png",
+      "svg": "https://flagcdn.com/np.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Azerbaijan",
+      "official": "Republic of Azerbaijan"
+    },
+    "cca2": "WT",
+    "cca3": "MIE",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Azerbaijan City"
+    ],
+    "population": 815597870,
+    "area": 729797,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "MIE": {
+        "name": "Azerbaijan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wt.png",
+      "svg": "https://flagcdn.com/wt.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Bahamas",
+      "official": "Republic of Bahamas"
+    },
+    "cca2": "JO",
+    "cca3": "XGF",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Bahamas City"
+    ],
+    "population": 567795338,
+    "area": 3733086,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XGF": {
+        "name": "Bahamas Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/jo.png",
+      "svg": "https://flagcdn.com/jo.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Bahrain",
+      "official": "Republic of Bahrain"
+    },
+    "cca2": "TU",
+    "cca3": "CRD",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Bahrain City"
+    ],
+    "population": 939463139,
+    "area": 1647542,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CRD": {
+        "name": "Bahrain Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/tu.png",
+      "svg": "https://flagcdn.com/tu.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Bangladesh",
+      "official": "Republic of Bangladesh"
+    },
+    "cca2": "WT",
+    "cca3": "WUH",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Bangladesh City"
+    ],
+    "population": 604246328,
+    "area": 281333,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WUH": {
+        "name": "Bangladesh Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wt.png",
+      "svg": "https://flagcdn.com/wt.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Barbados",
+      "official": "Republic of Barbados"
+    },
+    "cca2": "UR",
+    "cca3": "DUB",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Barbados City"
+    ],
+    "population": 1263381941,
+    "area": 8312785,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "DUB": {
+        "name": "Barbados Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ur.png",
+      "svg": "https://flagcdn.com/ur.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Belarus",
+      "official": "Republic of Belarus"
+    },
+    "cca2": "EU",
+    "cca3": "JLN",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Belarus City"
+    ],
+    "population": 507119846,
+    "area": 8949375,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "JLN": {
+        "name": "Belarus Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/eu.png",
+      "svg": "https://flagcdn.com/eu.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Belgium",
+      "official": "Republic of Belgium"
+    },
+    "cca2": "KM",
+    "cca3": "WPX",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Belgium City"
+    ],
+    "population": 1151608065,
+    "area": 4131243,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WPX": {
+        "name": "Belgium Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/km.png",
+      "svg": "https://flagcdn.com/km.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Belize",
+      "official": "Republic of Belize"
+    },
+    "cca2": "HN",
+    "cca3": "WAE",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Belize City"
+    ],
+    "population": 208265291,
+    "area": 1403892,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WAE": {
+        "name": "Belize Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/hn.png",
+      "svg": "https://flagcdn.com/hn.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Benin",
+      "official": "Republic of Benin"
+    },
+    "cca2": "EV",
+    "cca3": "ESJ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Benin City"
+    ],
+    "population": 209609319,
+    "area": 2987790,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ESJ": {
+        "name": "Benin Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ev.png",
+      "svg": "https://flagcdn.com/ev.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Bhutan",
+      "official": "Republic of Bhutan"
+    },
+    "cca2": "XY",
+    "cca3": "CIQ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Bhutan City"
+    ],
+    "population": 183623335,
+    "area": 8541558,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CIQ": {
+        "name": "Bhutan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/xy.png",
+      "svg": "https://flagcdn.com/xy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Bolivia",
+      "official": "Republic of Bolivia"
+    },
+    "cca2": "GR",
+    "cca3": "NIE",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Bolivia City"
+    ],
+    "population": 1431247028,
+    "area": 3429059,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NIE": {
+        "name": "Bolivia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/gr.png",
+      "svg": "https://flagcdn.com/gr.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Brazil",
+      "official": "Republic of Brazil"
+    },
+    "cca2": "NF",
+    "cca3": "GRM",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Brazil City"
+    ],
+    "population": 606882989,
+    "area": 6197389,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GRM": {
+        "name": "Brazil Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/nf.png",
+      "svg": "https://flagcdn.com/nf.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Brunei",
+      "official": "Republic of Brunei"
+    },
+    "cca2": "KM",
+    "cca3": "OAY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Brunei City"
+    ],
+    "population": 984122894,
+    "area": 1575019,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "OAY": {
+        "name": "Brunei Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/km.png",
+      "svg": "https://flagcdn.com/km.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Bulgaria",
+      "official": "Republic of Bulgaria"
+    },
+    "cca2": "WF",
+    "cca3": "KOA",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Bulgaria City"
+    ],
+    "population": 609534375,
+    "area": 4688962,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "KOA": {
+        "name": "Bulgaria Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wf.png",
+      "svg": "https://flagcdn.com/wf.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Burkina Faso",
+      "official": "Republic of Burkina Faso"
+    },
+    "cca2": "QE",
+    "cca3": "OHU",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Burkina Faso City"
+    ],
+    "population": 1343501262,
+    "area": 8410722,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "OHU": {
+        "name": "Burkina Faso Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/qe.png",
+      "svg": "https://flagcdn.com/qe.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Burundi",
+      "official": "Republic of Burundi"
+    },
+    "cca2": "PE",
+    "cca3": "GYH",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Burundi City"
+    ],
+    "population": 1153925044,
+    "area": 1451810,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GYH": {
+        "name": "Burundi Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pe.png",
+      "svg": "https://flagcdn.com/pe.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Cambodia",
+      "official": "Republic of Cambodia"
+    },
+    "cca2": "OY",
+    "cca3": "GYI",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Cambodia City"
+    ],
+    "population": 852530256,
+    "area": 2733295,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GYI": {
+        "name": "Cambodia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/oy.png",
+      "svg": "https://flagcdn.com/oy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Cameroon",
+      "official": "Republic of Cameroon"
+    },
+    "cca2": "JN",
+    "cca3": "QGC",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Cameroon City"
+    ],
+    "population": 672527799,
+    "area": 6806374,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "QGC": {
+        "name": "Cameroon Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/jn.png",
+      "svg": "https://flagcdn.com/jn.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Canada",
+      "official": "Republic of Canada"
+    },
+    "cca2": "OA",
+    "cca3": "WRK",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Canada City"
+    ],
+    "population": 1377872297,
+    "area": 668085,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WRK": {
+        "name": "Canada Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/oa.png",
+      "svg": "https://flagcdn.com/oa.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Chad",
+      "official": "Republic of Chad"
+    },
+    "cca2": "VX",
+    "cca3": "STG",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Chad City"
+    ],
+    "population": 807868867,
+    "area": 1365242,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "STG": {
+        "name": "Chad Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/vx.png",
+      "svg": "https://flagcdn.com/vx.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Chile",
+      "official": "Republic of Chile"
+    },
+    "cca2": "VY",
+    "cca3": "DBT",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Chile City"
+    ],
+    "population": 993749396,
+    "area": 1932804,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "DBT": {
+        "name": "Chile Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/vy.png",
+      "svg": "https://flagcdn.com/vy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "China",
+      "official": "Republic of China"
+    },
+    "cca2": "WY",
+    "cca3": "NAQ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "China City"
+    ],
+    "population": 240797627,
+    "area": 2174800,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NAQ": {
+        "name": "China Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wy.png",
+      "svg": "https://flagcdn.com/wy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Colombia",
+      "official": "Republic of Colombia"
+    },
+    "cca2": "OP",
+    "cca3": "WNG",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Colombia City"
+    ],
+    "population": 905205676,
+    "area": 1035897,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WNG": {
+        "name": "Colombia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/op.png",
+      "svg": "https://flagcdn.com/op.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Comoros",
+      "official": "Republic of Comoros"
+    },
+    "cca2": "XT",
+    "cca3": "PSF",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Comoros City"
+    ],
+    "population": 261457791,
+    "area": 5645435,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "PSF": {
+        "name": "Comoros Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/xt.png",
+      "svg": "https://flagcdn.com/xt.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Costa Rica",
+      "official": "Republic of Costa Rica"
+    },
+    "cca2": "TS",
+    "cca3": "RJZ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Costa Rica City"
+    ],
+    "population": 454406115,
+    "area": 8663170,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "RJZ": {
+        "name": "Costa Rica Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ts.png",
+      "svg": "https://flagcdn.com/ts.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Croatia",
+      "official": "Republic of Croatia"
+    },
+    "cca2": "EQ",
+    "cca3": "ZXK",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Croatia City"
+    ],
+    "population": 274873414,
+    "area": 4718958,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ZXK": {
+        "name": "Croatia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/eq.png",
+      "svg": "https://flagcdn.com/eq.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Cuba",
+      "official": "Republic of Cuba"
+    },
+    "cca2": "CQ",
+    "cca3": "VIW",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Cuba City"
+    ],
+    "population": 1487323391,
+    "area": 2238488,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "VIW": {
+        "name": "Cuba Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cq.png",
+      "svg": "https://flagcdn.com/cq.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Cyprus",
+      "official": "Republic of Cyprus"
+    },
+    "cca2": "AY",
+    "cca3": "CNJ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Cyprus City"
+    ],
+    "population": 631812169,
+    "area": 4985416,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CNJ": {
+        "name": "Cyprus Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ay.png",
+      "svg": "https://flagcdn.com/ay.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Czech Republic",
+      "official": "Republic of Czech Republic"
+    },
+    "cca2": "JF",
+    "cca3": "LTY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Czech Republic City"
+    ],
+    "population": 1000948306,
+    "area": 8088129,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "LTY": {
+        "name": "Czech Republic Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/jf.png",
+      "svg": "https://flagcdn.com/jf.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Denmark",
+      "official": "Republic of Denmark"
+    },
+    "cca2": "RK",
+    "cca3": "WEN",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Denmark City"
+    ],
+    "population": 1459136675,
+    "area": 1286586,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WEN": {
+        "name": "Denmark Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/rk.png",
+      "svg": "https://flagcdn.com/rk.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Dominican Republic",
+      "official": "Republic of Dominican Republic"
+    },
+    "cca2": "HQ",
+    "cca3": "PEW",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Dominican Republic City"
+    ],
+    "population": 713644022,
+    "area": 4502620,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "PEW": {
+        "name": "Dominican Republic Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/hq.png",
+      "svg": "https://flagcdn.com/hq.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Ecuador",
+      "official": "Republic of Ecuador"
+    },
+    "cca2": "KR",
+    "cca3": "GRC",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Ecuador City"
+    ],
+    "population": 880215444,
+    "area": 2325515,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GRC": {
+        "name": "Ecuador Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/kr.png",
+      "svg": "https://flagcdn.com/kr.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Egypt",
+      "official": "Republic of Egypt"
+    },
+    "cca2": "YT",
+    "cca3": "XKQ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Egypt City"
+    ],
+    "population": 908812334,
+    "area": 2407968,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XKQ": {
+        "name": "Egypt Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/yt.png",
+      "svg": "https://flagcdn.com/yt.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "El Salvador",
+      "official": "Republic of El Salvador"
+    },
+    "cca2": "GK",
+    "cca3": "CNW",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "El Salvador City"
+    ],
+    "population": 35978633,
+    "area": 3040322,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CNW": {
+        "name": "El Salvador Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/gk.png",
+      "svg": "https://flagcdn.com/gk.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Estonia",
+      "official": "Republic of Estonia"
+    },
+    "cca2": "FB",
+    "cca3": "DPM",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Estonia City"
+    ],
+    "population": 1253612549,
+    "area": 8107161,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "DPM": {
+        "name": "Estonia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/fb.png",
+      "svg": "https://flagcdn.com/fb.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Ethiopia",
+      "official": "Republic of Ethiopia"
+    },
+    "cca2": "WH",
+    "cca3": "JXO",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Ethiopia City"
+    ],
+    "population": 568510505,
+    "area": 7209434,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "JXO": {
+        "name": "Ethiopia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wh.png",
+      "svg": "https://flagcdn.com/wh.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Fiji",
+      "official": "Republic of Fiji"
+    },
+    "cca2": "VM",
+    "cca3": "SHG",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Fiji City"
+    ],
+    "population": 690625288,
+    "area": 5647022,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SHG": {
+        "name": "Fiji Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/vm.png",
+      "svg": "https://flagcdn.com/vm.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Finland",
+      "official": "Republic of Finland"
+    },
+    "cca2": "GR",
+    "cca3": "XRI",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Finland City"
+    ],
+    "population": 829917628,
+    "area": 8135346,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XRI": {
+        "name": "Finland Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/gr.png",
+      "svg": "https://flagcdn.com/gr.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "France",
+      "official": "Republic of France"
+    },
+    "cca2": "TO",
+    "cca3": "FLK",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "France City"
+    ],
+    "population": 927494928,
+    "area": 3060005,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "FLK": {
+        "name": "France Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/to.png",
+      "svg": "https://flagcdn.com/to.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Gabon",
+      "official": "Republic of Gabon"
+    },
+    "cca2": "HL",
+    "cca3": "WBC",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Gabon City"
+    ],
+    "population": 261737356,
+    "area": 5865932,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WBC": {
+        "name": "Gabon Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/hl.png",
+      "svg": "https://flagcdn.com/hl.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Gambia",
+      "official": "Republic of Gambia"
+    },
+    "cca2": "UP",
+    "cca3": "QSI",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Gambia City"
+    ],
+    "population": 1175779299,
+    "area": 6574635,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "QSI": {
+        "name": "Gambia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/up.png",
+      "svg": "https://flagcdn.com/up.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Georgia",
+      "official": "Republic of Georgia"
+    },
+    "cca2": "UA",
+    "cca3": "VYG",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Georgia City"
+    ],
+    "population": 956253216,
+    "area": 2308910,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "VYG": {
+        "name": "Georgia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ua.png",
+      "svg": "https://flagcdn.com/ua.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Germany",
+      "official": "Republic of Germany"
+    },
+    "cca2": "XA",
+    "cca3": "RHC",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Germany City"
+    ],
+    "population": 928022226,
+    "area": 2236561,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "RHC": {
+        "name": "Germany Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/xa.png",
+      "svg": "https://flagcdn.com/xa.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Ghana",
+      "official": "Republic of Ghana"
+    },
+    "cca2": "CG",
+    "cca3": "HYK",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Ghana City"
+    ],
+    "population": 1494851773,
+    "area": 5037169,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "HYK": {
+        "name": "Ghana Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cg.png",
+      "svg": "https://flagcdn.com/cg.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Greece",
+      "official": "Republic of Greece"
+    },
+    "cca2": "PC",
+    "cca3": "JGY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Greece City"
+    ],
+    "population": 347282219,
+    "area": 6537560,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "JGY": {
+        "name": "Greece Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pc.png",
+      "svg": "https://flagcdn.com/pc.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Guatemala",
+      "official": "Republic of Guatemala"
+    },
+    "cca2": "AI",
+    "cca3": "NPG",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Guatemala City"
+    ],
+    "population": 1416314304,
+    "area": 4373407,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NPG": {
+        "name": "Guatemala Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ai.png",
+      "svg": "https://flagcdn.com/ai.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Haiti",
+      "official": "Republic of Haiti"
+    },
+    "cca2": "QZ",
+    "cca3": "JWC",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Haiti City"
+    ],
+    "population": 703259107,
+    "area": 6352885,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "JWC": {
+        "name": "Haiti Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/qz.png",
+      "svg": "https://flagcdn.com/qz.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Honduras",
+      "official": "Republic of Honduras"
+    },
+    "cca2": "TL",
+    "cca3": "PFW",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Honduras City"
+    ],
+    "population": 649397578,
+    "area": 1134020,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "PFW": {
+        "name": "Honduras Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/tl.png",
+      "svg": "https://flagcdn.com/tl.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Hungary",
+      "official": "Republic of Hungary"
+    },
+    "cca2": "XY",
+    "cca3": "QWM",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Hungary City"
+    ],
+    "population": 95342370,
+    "area": 74557,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "QWM": {
+        "name": "Hungary Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/xy.png",
+      "svg": "https://flagcdn.com/xy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Iceland",
+      "official": "Republic of Iceland"
+    },
+    "cca2": "RJ",
+    "cca3": "CFA",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Iceland City"
+    ],
+    "population": 437062659,
+    "area": 7935431,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CFA": {
+        "name": "Iceland Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/rj.png",
+      "svg": "https://flagcdn.com/rj.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "India",
+      "official": "Republic of India"
+    },
+    "cca2": "DQ",
+    "cca3": "AXS",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "India City"
+    ],
+    "population": 300507758,
+    "area": 4730730,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "AXS": {
+        "name": "India Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/dq.png",
+      "svg": "https://flagcdn.com/dq.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Indonesia",
+      "official": "Republic of Indonesia"
+    },
+    "cca2": "RW",
+    "cca3": "WTS",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Indonesia City"
+    ],
+    "population": 851021188,
+    "area": 7030753,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WTS": {
+        "name": "Indonesia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/rw.png",
+      "svg": "https://flagcdn.com/rw.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Iran",
+      "official": "Republic of Iran"
+    },
+    "cca2": "SV",
+    "cca3": "BPQ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Iran City"
+    ],
+    "population": 77106855,
+    "area": 5485494,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BPQ": {
+        "name": "Iran Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/sv.png",
+      "svg": "https://flagcdn.com/sv.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Iraq",
+      "official": "Republic of Iraq"
+    },
+    "cca2": "UM",
+    "cca3": "WDG",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Iraq City"
+    ],
+    "population": 1239364371,
+    "area": 3070274,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WDG": {
+        "name": "Iraq Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/um.png",
+      "svg": "https://flagcdn.com/um.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Ireland",
+      "official": "Republic of Ireland"
+    },
+    "cca2": "ME",
+    "cca3": "ESZ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Ireland City"
+    ],
+    "population": 505378985,
+    "area": 143046,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ESZ": {
+        "name": "Ireland Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/me.png",
+      "svg": "https://flagcdn.com/me.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Israel",
+      "official": "Republic of Israel"
+    },
+    "cca2": "HO",
+    "cca3": "YPO",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Israel City"
+    ],
+    "population": 865753503,
+    "area": 7138383,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "YPO": {
+        "name": "Israel Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ho.png",
+      "svg": "https://flagcdn.com/ho.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Italy",
+      "official": "Republic of Italy"
+    },
+    "cca2": "WP",
+    "cca3": "HBY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Italy City"
+    ],
+    "population": 955073470,
+    "area": 3930889,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "HBY": {
+        "name": "Italy Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wp.png",
+      "svg": "https://flagcdn.com/wp.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Jamaica",
+      "official": "Republic of Jamaica"
+    },
+    "cca2": "WI",
+    "cca3": "YNK",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Jamaica City"
+    ],
+    "population": 1241219828,
+    "area": 22692,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "YNK": {
+        "name": "Jamaica Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wi.png",
+      "svg": "https://flagcdn.com/wi.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Japan",
+      "official": "Republic of Japan"
+    },
+    "cca2": "HB",
+    "cca3": "MCA",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Japan City"
+    ],
+    "population": 573006431,
+    "area": 4729621,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "MCA": {
+        "name": "Japan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/hb.png",
+      "svg": "https://flagcdn.com/hb.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Jordan",
+      "official": "Republic of Jordan"
+    },
+    "cca2": "PD",
+    "cca3": "UVJ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Jordan City"
+    ],
+    "population": 1301768735,
+    "area": 5250502,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "UVJ": {
+        "name": "Jordan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pd.png",
+      "svg": "https://flagcdn.com/pd.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Kazakhstan",
+      "official": "Republic of Kazakhstan"
+    },
+    "cca2": "TZ",
+    "cca3": "MFH",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Kazakhstan City"
+    ],
+    "population": 770288448,
+    "area": 5058582,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "MFH": {
+        "name": "Kazakhstan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/tz.png",
+      "svg": "https://flagcdn.com/tz.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Kenya",
+      "official": "Republic of Kenya"
+    },
+    "cca2": "ZE",
+    "cca3": "BLT",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Kenya City"
+    ],
+    "population": 808780160,
+    "area": 7198716,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BLT": {
+        "name": "Kenya Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ze.png",
+      "svg": "https://flagcdn.com/ze.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Kuwait",
+      "official": "Republic of Kuwait"
+    },
+    "cca2": "MT",
+    "cca3": "BST",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Kuwait City"
+    ],
+    "population": 921087214,
+    "area": 739962,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BST": {
+        "name": "Kuwait Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/mt.png",
+      "svg": "https://flagcdn.com/mt.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Kyrgyzstan",
+      "official": "Republic of Kyrgyzstan"
+    },
+    "cca2": "AE",
+    "cca3": "LUO",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Kyrgyzstan City"
+    ],
+    "population": 603540596,
+    "area": 1404617,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "LUO": {
+        "name": "Kyrgyzstan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ae.png",
+      "svg": "https://flagcdn.com/ae.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Laos",
+      "official": "Republic of Laos"
+    },
+    "cca2": "BC",
+    "cca3": "WEM",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Laos City"
+    ],
+    "population": 377930036,
+    "area": 1281378,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WEM": {
+        "name": "Laos Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bc.png",
+      "svg": "https://flagcdn.com/bc.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Latvia",
+      "official": "Republic of Latvia"
+    },
+    "cca2": "BK",
+    "cca3": "SHM",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Latvia City"
+    ],
+    "population": 1408593786,
+    "area": 4766582,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SHM": {
+        "name": "Latvia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bk.png",
+      "svg": "https://flagcdn.com/bk.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Lebanon",
+      "official": "Republic of Lebanon"
+    },
+    "cca2": "PM",
+    "cca3": "UIW",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Lebanon City"
+    ],
+    "population": 947354434,
+    "area": 6175972,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "UIW": {
+        "name": "Lebanon Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pm.png",
+      "svg": "https://flagcdn.com/pm.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Liberia",
+      "official": "Republic of Liberia"
+    },
+    "cca2": "SQ",
+    "cca3": "IEU",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Liberia City"
+    ],
+    "population": 1249280177,
+    "area": 2134823,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "IEU": {
+        "name": "Liberia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/sq.png",
+      "svg": "https://flagcdn.com/sq.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Libya",
+      "official": "Republic of Libya"
+    },
+    "cca2": "WB",
+    "cca3": "XFH",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Libya City"
+    ],
+    "population": 1226134623,
+    "area": 4053148,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XFH": {
+        "name": "Libya Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wb.png",
+      "svg": "https://flagcdn.com/wb.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Lithuania",
+      "official": "Republic of Lithuania"
+    },
+    "cca2": "HY",
+    "cca3": "SLZ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Lithuania City"
+    ],
+    "population": 723359345,
+    "area": 4049712,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SLZ": {
+        "name": "Lithuania Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/hy.png",
+      "svg": "https://flagcdn.com/hy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Luxembourg",
+      "official": "Republic of Luxembourg"
+    },
+    "cca2": "QY",
+    "cca3": "IUF",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Luxembourg City"
+    ],
+    "population": 1360381642,
+    "area": 700255,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "IUF": {
+        "name": "Luxembourg Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/qy.png",
+      "svg": "https://flagcdn.com/qy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Madagascar",
+      "official": "Republic of Madagascar"
+    },
+    "cca2": "WM",
+    "cca3": "KAY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Madagascar City"
+    ],
+    "population": 891364669,
+    "area": 5031674,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "KAY": {
+        "name": "Madagascar Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wm.png",
+      "svg": "https://flagcdn.com/wm.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Malawi",
+      "official": "Republic of Malawi"
+    },
+    "cca2": "YO",
+    "cca3": "CQV",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Malawi City"
+    ],
+    "population": 1146656588,
+    "area": 6662960,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CQV": {
+        "name": "Malawi Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/yo.png",
+      "svg": "https://flagcdn.com/yo.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Malaysia",
+      "official": "Republic of Malaysia"
+    },
+    "cca2": "BV",
+    "cca3": "NAC",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Malaysia City"
+    ],
+    "population": 773247931,
+    "area": 7187600,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NAC": {
+        "name": "Malaysia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bv.png",
+      "svg": "https://flagcdn.com/bv.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Maldives",
+      "official": "Republic of Maldives"
+    },
+    "cca2": "WK",
+    "cca3": "DHY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Maldives City"
+    ],
+    "population": 958717429,
+    "area": 8176951,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "DHY": {
+        "name": "Maldives Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wk.png",
+      "svg": "https://flagcdn.com/wk.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Mali",
+      "official": "Republic of Mali"
+    },
+    "cca2": "JU",
+    "cca3": "OEV",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Mali City"
+    ],
+    "population": 1456252947,
+    "area": 3844341,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "OEV": {
+        "name": "Mali Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ju.png",
+      "svg": "https://flagcdn.com/ju.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Malta",
+      "official": "Republic of Malta"
+    },
+    "cca2": "WX",
+    "cca3": "RFV",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Malta City"
+    ],
+    "population": 290040378,
+    "area": 3180449,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "RFV": {
+        "name": "Malta Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wx.png",
+      "svg": "https://flagcdn.com/wx.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Mexico",
+      "official": "Republic of Mexico"
+    },
+    "cca2": "AZ",
+    "cca3": "MIJ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Mexico City"
+    ],
+    "population": 460009988,
+    "area": 6787687,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "MIJ": {
+        "name": "Mexico Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/az.png",
+      "svg": "https://flagcdn.com/az.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Moldova",
+      "official": "Republic of Moldova"
+    },
+    "cca2": "FT",
+    "cca3": "AMS",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Moldova City"
+    ],
+    "population": 1043786327,
+    "area": 33884,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "AMS": {
+        "name": "Moldova Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ft.png",
+      "svg": "https://flagcdn.com/ft.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Mongolia",
+      "official": "Republic of Mongolia"
+    },
+    "cca2": "IU",
+    "cca3": "XOM",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Mongolia City"
+    ],
+    "population": 1163509578,
+    "area": 3285524,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XOM": {
+        "name": "Mongolia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/iu.png",
+      "svg": "https://flagcdn.com/iu.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Morocco",
+      "official": "Republic of Morocco"
+    },
+    "cca2": "SL",
+    "cca3": "WSL",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Morocco City"
+    ],
+    "population": 327792306,
+    "area": 7748760,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "WSL": {
+        "name": "Morocco Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/sl.png",
+      "svg": "https://flagcdn.com/sl.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Myanmar",
+      "official": "Republic of Myanmar"
+    },
+    "cca2": "BM",
+    "cca3": "CNH",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Myanmar City"
+    ],
+    "population": 1367463430,
+    "area": 4602489,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CNH": {
+        "name": "Myanmar Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bm.png",
+      "svg": "https://flagcdn.com/bm.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Nepal",
+      "official": "Republic of Nepal"
+    },
+    "cca2": "BV",
+    "cca3": "VNF",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Nepal City"
+    ],
+    "population": 1162968592,
+    "area": 1556211,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "VNF": {
+        "name": "Nepal Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bv.png",
+      "svg": "https://flagcdn.com/bv.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Netherlands",
+      "official": "Republic of Netherlands"
+    },
+    "cca2": "CK",
+    "cca3": "NCW",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Netherlands City"
+    ],
+    "population": 715363579,
+    "area": 5462536,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NCW": {
+        "name": "Netherlands Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ck.png",
+      "svg": "https://flagcdn.com/ck.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "New Zealand",
+      "official": "Republic of New Zealand"
+    },
+    "cca2": "MU",
+    "cca3": "XWH",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "New Zealand City"
+    ],
+    "population": 698850313,
+    "area": 1499440,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XWH": {
+        "name": "New Zealand Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/mu.png",
+      "svg": "https://flagcdn.com/mu.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Nicaragua",
+      "official": "Republic of Nicaragua"
+    },
+    "cca2": "TN",
+    "cca3": "HPG",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Nicaragua City"
+    ],
+    "population": 1481122472,
+    "area": 5514530,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "HPG": {
+        "name": "Nicaragua Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/tn.png",
+      "svg": "https://flagcdn.com/tn.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Niger",
+      "official": "Republic of Niger"
+    },
+    "cca2": "WH",
+    "cca3": "KEI",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Niger City"
+    ],
+    "population": 64396771,
+    "area": 5917212,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "KEI": {
+        "name": "Niger Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wh.png",
+      "svg": "https://flagcdn.com/wh.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Nigeria",
+      "official": "Republic of Nigeria"
+    },
+    "cca2": "VB",
+    "cca3": "OFK",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Nigeria City"
+    ],
+    "population": 381189166,
+    "area": 6127649,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "OFK": {
+        "name": "Nigeria Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/vb.png",
+      "svg": "https://flagcdn.com/vb.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "North Korea",
+      "official": "Republic of North Korea"
+    },
+    "cca2": "BD",
+    "cca3": "FTM",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "North Korea City"
+    ],
+    "population": 1183477422,
+    "area": 8807367,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "FTM": {
+        "name": "North Korea Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bd.png",
+      "svg": "https://flagcdn.com/bd.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Norway",
+      "official": "Republic of Norway"
+    },
+    "cca2": "RJ",
+    "cca3": "BJC",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Norway City"
+    ],
+    "population": 1252360183,
+    "area": 7670741,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BJC": {
+        "name": "Norway Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/rj.png",
+      "svg": "https://flagcdn.com/rj.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Oman",
+      "official": "Republic of Oman"
+    },
+    "cca2": "EH",
+    "cca3": "NSL",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Oman City"
+    ],
+    "population": 1373706743,
+    "area": 6096504,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NSL": {
+        "name": "Oman Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/eh.png",
+      "svg": "https://flagcdn.com/eh.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Pakistan",
+      "official": "Republic of Pakistan"
+    },
+    "cca2": "SE",
+    "cca3": "PMU",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Pakistan City"
+    ],
+    "population": 555727512,
+    "area": 4973906,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "PMU": {
+        "name": "Pakistan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/se.png",
+      "svg": "https://flagcdn.com/se.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Panama",
+      "official": "Republic of Panama"
+    },
+    "cca2": "BW",
+    "cca3": "EFY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Panama City"
+    ],
+    "population": 169249732,
+    "area": 4786422,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "EFY": {
+        "name": "Panama Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bw.png",
+      "svg": "https://flagcdn.com/bw.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Paraguay",
+      "official": "Republic of Paraguay"
+    },
+    "cca2": "QP",
+    "cca3": "RTE",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Paraguay City"
+    ],
+    "population": 401960879,
+    "area": 4041518,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "RTE": {
+        "name": "Paraguay Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/qp.png",
+      "svg": "https://flagcdn.com/qp.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Peru",
+      "official": "Republic of Peru"
+    },
+    "cca2": "PG",
+    "cca3": "BRO",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Peru City"
+    ],
+    "population": 1086584525,
+    "area": 3729708,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BRO": {
+        "name": "Peru Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pg.png",
+      "svg": "https://flagcdn.com/pg.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Philippines",
+      "official": "Republic of Philippines"
+    },
+    "cca2": "EY",
+    "cca3": "FLQ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Philippines City"
+    ],
+    "population": 437804843,
+    "area": 3433761,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "FLQ": {
+        "name": "Philippines Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ey.png",
+      "svg": "https://flagcdn.com/ey.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Poland",
+      "official": "Republic of Poland"
+    },
+    "cca2": "LY",
+    "cca3": "MYU",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Poland City"
+    ],
+    "population": 162090857,
+    "area": 8221794,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "MYU": {
+        "name": "Poland Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ly.png",
+      "svg": "https://flagcdn.com/ly.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Portugal",
+      "official": "Republic of Portugal"
+    },
+    "cca2": "XC",
+    "cca3": "UTJ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Portugal City"
+    ],
+    "population": 388181057,
+    "area": 8935593,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "UTJ": {
+        "name": "Portugal Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/xc.png",
+      "svg": "https://flagcdn.com/xc.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Qatar",
+      "official": "Republic of Qatar"
+    },
+    "cca2": "XC",
+    "cca3": "GYZ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Qatar City"
+    ],
+    "population": 1341205046,
+    "area": 1815206,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GYZ": {
+        "name": "Qatar Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/xc.png",
+      "svg": "https://flagcdn.com/xc.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Romania",
+      "official": "Republic of Romania"
+    },
+    "cca2": "FG",
+    "cca3": "CAR",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Romania City"
+    ],
+    "population": 915644214,
+    "area": 383916,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CAR": {
+        "name": "Romania Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/fg.png",
+      "svg": "https://flagcdn.com/fg.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Russia",
+      "official": "Republic of Russia"
+    },
+    "cca2": "DS",
+    "cca3": "KIX",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Russia City"
+    ],
+    "population": 1333180104,
+    "area": 3058911,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "KIX": {
+        "name": "Russia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ds.png",
+      "svg": "https://flagcdn.com/ds.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Rwanda",
+      "official": "Republic of Rwanda"
+    },
+    "cca2": "SP",
+    "cca3": "YKN",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Rwanda City"
+    ],
+    "population": 169873044,
+    "area": 5527157,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "YKN": {
+        "name": "Rwanda Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/sp.png",
+      "svg": "https://flagcdn.com/sp.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Saudi Arabia",
+      "official": "Republic of Saudi Arabia"
+    },
+    "cca2": "MI",
+    "cca3": "ZYV",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Saudi Arabia City"
+    ],
+    "population": 559420991,
+    "area": 674357,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ZYV": {
+        "name": "Saudi Arabia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/mi.png",
+      "svg": "https://flagcdn.com/mi.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Senegal",
+      "official": "Republic of Senegal"
+    },
+    "cca2": "SO",
+    "cca3": "GRS",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Senegal City"
+    ],
+    "population": 528677180,
+    "area": 4326873,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "GRS": {
+        "name": "Senegal Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/so.png",
+      "svg": "https://flagcdn.com/so.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Serbia",
+      "official": "Republic of Serbia"
+    },
+    "cca2": "WM",
+    "cca3": "ZDS",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Serbia City"
+    ],
+    "population": 235959242,
+    "area": 320383,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ZDS": {
+        "name": "Serbia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/wm.png",
+      "svg": "https://flagcdn.com/wm.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Singapore",
+      "official": "Republic of Singapore"
+    },
+    "cca2": "KY",
+    "cca3": "BQK",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Singapore City"
+    ],
+    "population": 1432176814,
+    "area": 589426,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "BQK": {
+        "name": "Singapore Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ky.png",
+      "svg": "https://flagcdn.com/ky.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Slovakia",
+      "official": "Republic of Slovakia"
+    },
+    "cca2": "CS",
+    "cca3": "MHN",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Slovakia City"
+    ],
+    "population": 539910277,
+    "area": 6246008,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "MHN": {
+        "name": "Slovakia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cs.png",
+      "svg": "https://flagcdn.com/cs.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Slovenia",
+      "official": "Republic of Slovenia"
+    },
+    "cca2": "ZR",
+    "cca3": "STD",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Slovenia City"
+    ],
+    "population": 1429842829,
+    "area": 7067450,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "STD": {
+        "name": "Slovenia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/zr.png",
+      "svg": "https://flagcdn.com/zr.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Somalia",
+      "official": "Republic of Somalia"
+    },
+    "cca2": "YF",
+    "cca3": "CJL",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Somalia City"
+    ],
+    "population": 275775359,
+    "area": 4693273,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CJL": {
+        "name": "Somalia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/yf.png",
+      "svg": "https://flagcdn.com/yf.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "South Africa",
+      "official": "Republic of South Africa"
+    },
+    "cca2": "JP",
+    "cca3": "UMD",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "South Africa City"
+    ],
+    "population": 667082572,
+    "area": 3423555,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "UMD": {
+        "name": "South Africa Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/jp.png",
+      "svg": "https://flagcdn.com/jp.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "South Korea",
+      "official": "Republic of South Korea"
+    },
+    "cca2": "BU",
+    "cca3": "HMY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "South Korea City"
+    ],
+    "population": 1375484329,
+    "area": 381294,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "HMY": {
+        "name": "South Korea Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bu.png",
+      "svg": "https://flagcdn.com/bu.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Spain",
+      "official": "Republic of Spain"
+    },
+    "cca2": "XD",
+    "cca3": "SNU",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Spain City"
+    ],
+    "population": 356212827,
+    "area": 3799402,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SNU": {
+        "name": "Spain Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/xd.png",
+      "svg": "https://flagcdn.com/xd.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Sri Lanka",
+      "official": "Republic of Sri Lanka"
+    },
+    "cca2": "XP",
+    "cca3": "ZVK",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Sri Lanka City"
+    ],
+    "population": 1365115195,
+    "area": 6321961,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ZVK": {
+        "name": "Sri Lanka Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/xp.png",
+      "svg": "https://flagcdn.com/xp.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Sudan",
+      "official": "Republic of Sudan"
+    },
+    "cca2": "CP",
+    "cca3": "EQX",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Sudan City"
+    ],
+    "population": 978926201,
+    "area": 8566369,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "EQX": {
+        "name": "Sudan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cp.png",
+      "svg": "https://flagcdn.com/cp.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Sweden",
+      "official": "Republic of Sweden"
+    },
+    "cca2": "GB",
+    "cca3": "NCI",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Sweden City"
+    ],
+    "population": 1200151190,
+    "area": 4868842,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "NCI": {
+        "name": "Sweden Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/gb.png",
+      "svg": "https://flagcdn.com/gb.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Switzerland",
+      "official": "Republic of Switzerland"
+    },
+    "cca2": "QO",
+    "cca3": "ZEQ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Switzerland City"
+    ],
+    "population": 727854110,
+    "area": 7105659,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ZEQ": {
+        "name": "Switzerland Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/qo.png",
+      "svg": "https://flagcdn.com/qo.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Syria",
+      "official": "Republic of Syria"
+    },
+    "cca2": "EZ",
+    "cca3": "FHT",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Syria City"
+    ],
+    "population": 555391945,
+    "area": 1657286,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "FHT": {
+        "name": "Syria Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ez.png",
+      "svg": "https://flagcdn.com/ez.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Taiwan",
+      "official": "Republic of Taiwan"
+    },
+    "cca2": "BI",
+    "cca3": "ODN",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Taiwan City"
+    ],
+    "population": 794179223,
+    "area": 7841368,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ODN": {
+        "name": "Taiwan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/bi.png",
+      "svg": "https://flagcdn.com/bi.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Tajikistan",
+      "official": "Republic of Tajikistan"
+    },
+    "cca2": "ML",
+    "cca3": "TLY",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Tajikistan City"
+    ],
+    "population": 291199277,
+    "area": 2011373,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "TLY": {
+        "name": "Tajikistan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ml.png",
+      "svg": "https://flagcdn.com/ml.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Tanzania",
+      "official": "Republic of Tanzania"
+    },
+    "cca2": "MQ",
+    "cca3": "XGD",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Tanzania City"
+    ],
+    "population": 821054792,
+    "area": 6437914,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "XGD": {
+        "name": "Tanzania Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/mq.png",
+      "svg": "https://flagcdn.com/mq.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Thailand",
+      "official": "Republic of Thailand"
+    },
+    "cca2": "JH",
+    "cca3": "OVM",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Thailand City"
+    ],
+    "population": 212592957,
+    "area": 6900825,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "OVM": {
+        "name": "Thailand Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/jh.png",
+      "svg": "https://flagcdn.com/jh.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Tunisia",
+      "official": "Republic of Tunisia"
+    },
+    "cca2": "YP",
+    "cca3": "SRZ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Tunisia City"
+    ],
+    "population": 781848581,
+    "area": 3971342,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SRZ": {
+        "name": "Tunisia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/yp.png",
+      "svg": "https://flagcdn.com/yp.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Turkey",
+      "official": "Republic of Turkey"
+    },
+    "cca2": "PW",
+    "cca3": "LZP",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Turkey City"
+    ],
+    "population": 1351402720,
+    "area": 7188253,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "LZP": {
+        "name": "Turkey Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/pw.png",
+      "svg": "https://flagcdn.com/pw.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Uganda",
+      "official": "Republic of Uganda"
+    },
+    "cca2": "IC",
+    "cca3": "CUQ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Uganda City"
+    ],
+    "population": 313316155,
+    "area": 4207735,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "CUQ": {
+        "name": "Uganda Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/ic.png",
+      "svg": "https://flagcdn.com/ic.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Ukraine",
+      "official": "Republic of Ukraine"
+    },
+    "cca2": "MX",
+    "cca3": "JNF",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Ukraine City"
+    ],
+    "population": 1108173970,
+    "area": 3603489,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "JNF": {
+        "name": "Ukraine Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/mx.png",
+      "svg": "https://flagcdn.com/mx.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "United Arab Emirates",
+      "official": "Republic of United Arab Emirates"
+    },
+    "cca2": "KF",
+    "cca3": "ZHQ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "United Arab Emirates City"
+    ],
+    "population": 141750112,
+    "area": 4826917,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "ZHQ": {
+        "name": "United Arab Emirates Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/kf.png",
+      "svg": "https://flagcdn.com/kf.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "United Kingdom",
+      "official": "Republic of United Kingdom"
+    },
+    "cca2": "CY",
+    "cca3": "JZA",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "United Kingdom City"
+    ],
+    "population": 682091315,
+    "area": 4715021,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "JZA": {
+        "name": "United Kingdom Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/cy.png",
+      "svg": "https://flagcdn.com/cy.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "United States",
+      "official": "Republic of United States"
+    },
+    "cca2": "TE",
+    "cca3": "QFZ",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "United States City"
+    ],
+    "population": 613093978,
+    "area": 3248712,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "QFZ": {
+        "name": "United States Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/te.png",
+      "svg": "https://flagcdn.com/te.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Uruguay",
+      "official": "Republic of Uruguay"
+    },
+    "cca2": "OA",
+    "cca3": "FHO",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Uruguay City"
+    ],
+    "population": 721715891,
+    "area": 7002962,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "FHO": {
+        "name": "Uruguay Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/oa.png",
+      "svg": "https://flagcdn.com/oa.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Uzbekistan",
+      "official": "Republic of Uzbekistan"
+    },
+    "cca2": "HM",
+    "cca3": "QDR",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Uzbekistan City"
+    ],
+    "population": 1008022655,
+    "area": 6183565,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "QDR": {
+        "name": "Uzbekistan Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/hm.png",
+      "svg": "https://flagcdn.com/hm.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Vietnam",
+      "official": "Republic of Vietnam"
+    },
+    "cca2": "VM",
+    "cca3": "UJN",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Vietnam City"
+    ],
+    "population": 1300566173,
+    "area": 1490123,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "UJN": {
+        "name": "Vietnam Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/vm.png",
+      "svg": "https://flagcdn.com/vm.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Yemen",
+      "official": "Republic of Yemen"
+    },
+    "cca2": "VZ",
+    "cca3": "RWU",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Yemen City"
+    ],
+    "population": 671857566,
+    "area": 5525103,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "RWU": {
+        "name": "Yemen Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/vz.png",
+      "svg": "https://flagcdn.com/vz.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Zambia",
+      "official": "Republic of Zambia"
+    },
+    "cca2": "OZ",
+    "cca3": "SQG",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Zambia City"
+    ],
+    "population": 1377370789,
+    "area": 5562156,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "SQG": {
+        "name": "Zambia Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/oz.png",
+      "svg": "https://flagcdn.com/oz.svg"
+    }
+  },
+  {
+    "name": {
+      "common": "Zimbabwe",
+      "official": "Republic of Zimbabwe"
+    },
+    "cca2": "RM",
+    "cca3": "HFE",
+    "region": "Asia",
+    "subregion": "Global",
+    "capital": [
+      "Zimbabwe City"
+    ],
+    "population": 25103338,
+    "area": 1088794,
+    "languages": {
+      "eng": "English"
+    },
+    "currencies": {
+      "HFE": {
+        "name": "Zimbabwe Currency",
+        "symbol": "$"
+      }
+    },
+    "flags": {
+      "png": "https://flagcdn.com/w320/rm.png",
+      "svg": "https://flagcdn.com/rm.svg"
+    }
+  }
+]

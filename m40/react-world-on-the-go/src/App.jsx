@@ -1,17 +1,19 @@
 
-import './App.css'
+import { Suspense } from "react";
+import "./App.css";
+import Countries from "./components/Countries/Countries";
+
+const countriesPromise = fetch("countries.json").then(res => res.json())
 
 function App() {
-
   return (
     <>
-  
-      <h1></h1>
-      <p></p>
-      
-      
+    <Suspense fallback={<h1>Loading..........</h1>}>
+    <Countries countriesPromise={countriesPromise}></Countries>
+
+    </Suspense>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
