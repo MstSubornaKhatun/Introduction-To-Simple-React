@@ -1,0 +1,838 @@
+===============================
+Module 41: Modules and Data Storage Integration
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- ES6 module system (import/export) কীভাবে কাজ করে?
+- Fake data fetch করার পদ্ধতি কী?
+- Event handler এর মধ্যে data send করার জন্য arrow function কেন দরকার?
+- Local storage এ data কিভাবে রাখা যায়?
+- reduce method এর ব্যবহার কী?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. ES6 Modules (import/export)
+👉 Example:
+export const add = (a, b) => a + b;
+import { add } from './math.js';
+
+📌 Explanation:
+- export → কোনো function/variable অন্য ফাইলে ব্যবহার করার জন্য পাঠানো হয়।
+- import → অন্য ফাইল থেকে function/variable আনা হয়।
+- Auto import → অনেক সময় IDE নিজে থেকে import করে দেয়, কিন্তু সবসময় খেয়াল রাখতে হবে।
+
+---
+
+2. Fake Data Fetch
+👉 Example:
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+📌 Explanation:
+- Fake API → practice করার জন্য ব্যবহার হয়।
+- fetch() → data আনার জন্য asynchronous function।
+- এইটা পরের module এ বিস্তারিতভাবে দেখানো হবে।
+
+---
+
+3. Event Handler + Arrow Function
+👉 Example:
+<button onClick={() => handleClick(data)}>Click</button>
+
+📌 Explanation:
+- Arrow function → event handler এর মধ্যে data send করার জন্য ব্যবহার হয়।
+- handleClick(data) → function এ parameter পাঠানো যায়।
+- Lifetime skill → সবসময় কাজে লাগবে।
+
+---
+
+4. Local Storage
+👉 Example:
+localStorage.setItem('visited', 'Bangladesh');
+const country = localStorage.getItem('visited');
+
+📌 Explanation:
+- localStorage → browser এ data save করার জায়গা।
+- setItem(key, value) → data save করে।
+- getItem(key) → data retrieve করে।
+- Future module এ এইটা আরও কাজে লাগবে।
+
+---
+
+5. reduce Method
+👉 Example:
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+
+📌 Explanation:
+- reduce → array এর সব element কে একত্রে একটি value তে পরিণত করে।
+- acc → accumulator (আগের মান)।
+- curr → current value।
+- Initial value → 0 দেওয়া হয়েছে।
+- না বুঝলেও চিন্তার কিছু নেই, ধীরে ধীরে clear হবে।
+
+---
+
+6. Advantages
+- ES6 module → code reusable এবং organized হয়।
+- Fake data fetch → practice করার জন্য সহজ উপায়।
+- Arrow function → concise এবং সহজে data send করা যায়।
+- Local storage → persistent data রাখা যায়।
+- reduce → powerful array method, data summarize করতে কাজে লাগে।
+
+---
+
+📌 Summary
+- Module 41 এ শেখানো হয়েছে → ES6 import/export, fake data fetch, event handler এ arrow function, local storage।
+- reduce method → array data summarize করার জন্য ব্যবহার হয়।
+- এই skill গুলো lifetime কাজে লাগবে এবং পরবর্তী module গুলোতে আরও গভীরভাবে ব্যবহার করা হবে।
+
+
+===============================
+41-1 Module Introduction: ES6 Modules (Simple Import, Export)
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- ES6 module system কীভাবে কাজ করে?
+- import/export এর syntax কী?
+- alias (as) ব্যবহার করার সুবিধা কী?
+- কিভাবে function reuse করা যায়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Vite Project Setup
+👉 Command:
+npm create vite@latest es6-export-import-module -- --template react
+
+📌 Explanation:
+- Vite → fast build tool for React projects.
+- এই command → নতুন React project তৈরি করে।
+- Template → react project structure automatically তৈরি হয়।
+
+---
+
+2. Object Shorthand in ES6
+👉 Example:
+const name = 'Jabbar'
+const profession = 'Boli'
+
+{name: name, profession: profession}  
+{name, profession}
+
+📌 Explanation:
+- {name, profession} → shorthand syntax।
+- Key এবং variable name একই হলে shorthand ব্যবহার করা যায়।
+- Output → {name: 'Jabbar', profession: 'Boli'}
+
+---
+
+3. Import in App.jsx
+👉 Code:
+import { useState } from 'react'
+import './App.css'
+import { add, diff, mult, divide as div } from './components/utils/math/math';
+
+📌 Explanation:
+- useState → React hook import করা হয়েছে।
+- './App.css' → CSS file import করা হয়েছে।
+- { add, diff, mult, divide as div } → math.js থেকে functions import করা হয়েছে।
+- divide as div → alias ব্যবহার করে function এর নাম পরিবর্তন করা হয়েছে।
+
+---
+
+4. Using Imported Functions
+👉 Code:
+const sum = add(2, 4);
+const subs = diff(12, 8);
+const goonfol = mult(2, 3);
+const divide = 15/3;
+const something = div(25/5);
+
+console.log(sum, subs, goonfol, something);
+
+📌 Explanation:
+- add(2,4) → 6 return করে।
+- diff(12,8) → 4 return করে।
+- mult(2,3) → 6 return করে।
+- div(25/5) → 5 return করে।
+- সব result console এ দেখা যায়।
+
+---
+
+5. Export in math.js
+👉 Code:
+const add = (a,b) => a+b;
+const diff = (a,b) => a-b;
+const multiplyTwoNumber = (a,b) => a*b;
+const divide = (a,b) => a/b;
+
+export { add, diff, multiplyTwoNumber as mult, divide }
+
+📌 Explanation:
+- Functions define করা হয়েছে।
+- export → অন্য ফাইলে ব্যবহার করার জন্য পাঠানো হয়েছে।
+- multiplyTwoNumber as mult → alias দিয়ে নাম পরিবর্তন করা হয়েছে।
+
+---
+
+6. Import in Another File
+👉 Code:
+import { mult } from "../math/math";
+
+const calculateTax = mult(2000, .15)
+console.log(calculateTax)
+
+📌 Explanation:
+- mult import করা হয়েছে।
+- mult(2000, .15) → 2000 × 0.15 = 300 return করে।
+- console এ tax value দেখা যায়।
+
+---
+
+7. ES6 Module Overview
+- import/export → code reuse এবং modular structure তৈরি করে।
+- alias (as) → নাম পরিবর্তন করে সহজে ব্যবহার করা যায়।
+- Shorthand object → clean এবং concise code।
+- Functions → আলাদা ফাইলে রেখে project organized করা যায়।
+
+---
+
+📌 Summary
+- Vite দিয়ে React project তৈরি করা হয়েছে।
+- ES6 shorthand object syntax ব্যবহার করা হয়েছে।
+- math.js এ functions export করা হয়েছে।
+- App.jsx এ import করে ব্যবহার করা হয়েছে।
+- alias ব্যবহার করে function এর নাম পরিবর্তন করা হয়েছে।
+- Output → বিভিন্ন calculation console এ দেখা যায়।
+
+
+===============================
+41-2 ES6 Modules, Import Default, Relative Path
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Vite দিয়ে React project setup কিভাবে হয়?
+- ES6 module import/export এর নিয়ম কী?
+- Default import এবং relative path কীভাবে কাজ করে?
+- Suspense দিয়ে asynchronous data কিভাবে handle করা যায়?
+- bottles.json data কিভাবে fetch করা হয়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Vite Project Setup
+👉 Command:
+npm create vite@latest memorable-water-bottles -- --template react  
+cd memorable-water-bottles  
+npm install  
+npm run dev  
+
+📌 Explanation:
+- Vite → fast build tool for React projects।
+- Template → react project structure তৈরি করে।
+- npm run dev → local development server চালু করে।
+
+---
+
+2. bottles.json (Fake Data)
+👉 Prompt Example:
+Give me 5 water bottle data in JSON format with:
+- weight
+- usage duration
+- hot/cold drinks support
+- image link
+
+📌 Explanation:
+- bottles.json → public folder এ রাখা হয়।
+- fetch('bottles.json') → এই data project এ ব্যবহার করা যায়।
+- JSON format → structured data যা React component এ সহজে render করা যায়।
+
+---
+
+3. App.jsx
+👉 Code:
+import { Suspense } from 'react'
+import './App.css'
+import Bottles from './components/Bottles/Bottles'
+
+const bottlesPromise = fetch('bottles.json').then(res => res.json())
+
+function App() {
+  return (
+    <>
+      <h1>Buy Awesome Water Bottle</h1>
+      <Suspense fallback={<h3>Bottles are loading....</h3>}>
+        <Bottles bottlesPromise={bottlesPromise}></Bottles>
+      </Suspense>
+    </>
+  )
+}
+export default App
+
+📌 Explanation:
+- import { Suspense } → React Suspense component asynchronous data handle করে।
+- import Bottles → relative path দিয়ে অন্য component import করা হয়েছে।
+- bottlesPromise → fetch() দিয়ে bottles.json থেকে data আনা হচ্ছে।
+- Suspense fallback → data load হওয়ার সময় "Bottles are loading..." দেখায়।
+- Bottles component → bottlesPromise props হিসেবে পাচ্ছে।
+
+---
+
+4. Bottles.jsx
+👉 Code:
+import React, { use } from 'react';
+
+const Bottles = ({bottlesPromise}) => {
+   const bottles = use(bottlesPromise);
+   console.log(bottles)
+   return (
+     <div>
+       {/* এখানে bottles data render করা যাবে */}
+     </div>
+   );
+};
+export default Bottles;
+
+📌 Explanation:
+- import React, { use } → use() hook দিয়ে promise resolve করা হচ্ছে।
+- bottlesPromise → parent থেকে আসা data।
+- use(bottlesPromise) → JSON data resolve করে bottles variable এ রাখছে।
+- console.log(bottles) → data browser console এ দেখা যায়।
+- return → UI তে bottles data render করার জায়গা।
+
+---
+
+5. ES6 Module Concepts
+- import/export → code modular এবং reusable হয়।
+- Default export → export default App → import করলে নাম পরিবর্তন করা যায়।
+- Named export → export { Bottles } → import করার সময় নাম একই রাখতে হয়।
+- Relative path → './components/Bottles/Bottles' → project structure অনুযায়ী file path ব্যবহার করা হয়।
+
+---
+
+6. Output (Example)
+Buy Awesome Water Bottle  
+Bottles are loading... (loading state)  
+👉 পরে bottles.json থেকে data আসলে console এ দেখা যাবে।  
+UI তে প্রতিটি bottle এর নাম, weight, usage, hot/cold support, image দেখানো যাবে।  
+
+---
+
+7. Advantages
+- Vite → fast এবং modern development setup।
+- ES6 module → clean এবং organized code।
+- Suspense → asynchronous data load সহজে handle হয়।
+- JSON data → structured এবং reusable।
+- Relative path → project structure অনুযায়ী component import করা যায়।
+
+---
+
+📌 Summary
+- Vite দিয়ে React project setup করা হয়েছে।
+- bottles.json → public folder থেকে fetch করা হয়েছে।
+- App.jsx → Suspense দিয়ে Bottles component render করছে।
+- Bottles.jsx → use() দিয়ে promise resolve করছে।
+- ES6 module system → import/export, default export, relative path ব্যবহার করা হয়েছে।
+
+
+===============================
+41-3 Create and Load Fake Data, JSON Generator, Online API
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- কিভাবে fake data তৈরি করা যায়?
+- GitHub repository থেকে JSON data কিভাবে fetch করা যায়?
+- React Suspense দিয়ে asynchronous data কিভাবে handle করা হয়?
+- Component structure কেমন হবে?
+- CSS দিয়ে card style কিভাবে করা যায়?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Fake Data Creation
+👉 Steps:
+- GitHub এ নতুন repository তৈরি করুন → bottles-data  
+- নতুন ফাইল তৈরি করুন → bottles.json  
+- JSON format এ bottle data লিখুন (id, name, weight, usage, hot/cold support, image link)।  
+- Commit changes করুন।  
+- Raw file link copy করুন।  
+
+👉 Example fetch:
+const bottlesPromise2 = fetch('https://raw.githubusercontent.com/MstSubornaKhatun/bottles-data/refs/heads/main/bottles.json').then(res => res.json())
+
+📌 Explanation:
+- fetch() → GitHub raw link থেকে JSON data আনে।
+- .then(res => res.json()) → response কে JSON এ convert করে।
+
+---
+
+2. App.jsx (Parent Component)
+👉 Code:
+import { Suspense } from 'react'
+import './App.css'
+import Bottles from './components/Bottles/Bottles'
+
+const bottlesPromise = fetch('bottles.json').then(res => res.json())
+
+function App() {
+  return (
+    <>
+      <h1>Buy Awesome Water Bottle</h1>
+      <Suspense fallback={<h3>Bottles are loading....</h3>}>
+        <Bottles bottlesPromise={bottlesPromise}></Bottles>
+      </Suspense>
+    </>
+  )
+}
+export default App
+
+📌 Explanation:
+- Suspense → asynchronous data load হওয়ার সময় fallback UI দেখায়।
+- bottlesPromise → local bottles.json থেকে data fetch করছে।
+- Bottles component → bottlesPromise props হিসেবে পাচ্ছে।
+
+---
+
+3. Bottles.jsx (Child Component)
+👉 Code:
+import React, { use } from 'react';
+import Bottle from '../Bottle/Bottle';
+
+const Bottles = ({bottlesPromise}) => {
+   const bottles = use(bottlesPromise);
+   console.log(bottles)
+   return (
+     <div>
+       <h3>Bottles: {bottles.length}</h3>
+       {bottles.map(bottle => <Bottle key={bottle.id} bottle={bottle}></Bottle>)}
+     </div>
+   );
+};
+export default Bottles;
+
+📌 Explanation:
+- use(bottlesPromise) → promise resolve করে bottles data return করছে।
+- bottles.length → কতগুলো bottle আছে তা দেখাচ্ছে।
+- bottles.map() → প্রতিটি bottle কে Bottle component এ পাঠাচ্ছে।
+- key={bottle.id} → unique key ব্যবহার করা হয়েছে।
+
+---
+
+4. Bottle.jsx (Single Item Component)
+👉 Code:
+import React from 'react';
+import './Bottle.css'
+
+const Bottle = ({bottle}) => {
+    console.log(bottle)
+    return (
+        <div className='card'>
+            <img src={bottle.img} alt="" />
+        </div>
+    );
+};
+export default Bottle;
+
+📌 Explanation:
+- bottle.img → প্রতিটি bottle এর image দেখাচ্ছে।
+- className='card' → CSS style apply হচ্ছে।
+- console.log(bottle) → প্রতিটি bottle এর data console এ দেখা যায়।
+
+---
+
+5. Bottle.css
+👉 Code:
+.card {
+    border: 2px solid teal;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+📌 Explanation:
+- border → teal color এর border।
+- padding → content এর চারপাশে space।
+- border-radius → corner গুলো গোলাকার করছে।
+
+---
+
+6. Free APIs
+👉 Note:
+- GitHub এ অনেক free APIs পাওয়া যায়।
+- Practice করার জন্য JSON placeholder, fakestoreapi, বা custom GitHub JSON ব্যবহার করা যায়।
+- fetch() দিয়ে সহজে data আনা যায়।
+
+---
+
+7. Output (Example)
+Buy Awesome Water Bottle  
+Bottles: 5  
+
+👉 প্রতিটি bottle card আকারে দেখাবে:  
+- Image  
+- (Future এ name, weight, usage, hot/cold support দেখানো যাবে)  
+
+---
+
+8. Advantages
+- GitHub JSON → সহজে fake data তৈরি ও share করা যায়।
+- Suspense → asynchronous data load সুন্দরভাবে handle হয়।
+- Component structure → reusable এবং organized।
+- CSS card → UI সুন্দরভাবে সাজানো যায়।
+- Free APIs → practice করার জন্য অসংখ্য data source পাওয়া যায়।
+
+---
+
+📌 Summary
+- GitHub repository এ bottles.json তৈরি করা হয়েছে।
+- App.jsx → Suspense দিয়ে Bottles component render করছে।
+- Bottles.jsx → use() দিয়ে promise resolve করছে এবং Bottle component এ data পাঠাচ্ছে।
+- Bottle.jsx → প্রতিটি bottle এর image card আকারে দেখাচ্ছে।
+- CSS → teal border, padding, rounded corner দিয়ে সুন্দর UI তৈরি হয়েছে।
+- Free APIs → practice ও data integration এর জন্য ব্যবহার করা যায়।
+
+
+===============================
+41-4 (Recap) Load Bottles Data and Show in Grid Layout
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- কিভাবে bottles data load করা যায়?
+- Grid layout দিয়ে UI কিভাবে সাজানো যায়?
+- Event handler দিয়ে cart এ data কিভাবে পাঠানো যায়?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Bottles.jsx (Parent Component)
+👉 Code:
+import React, { use, useState } from "react";
+import Bottle from "../Bottle/Bottle";
+import './Bottles.css'
+
+📌 Explanation:
+- React import করা হয়েছে।
+- use → Suspense এর সাথে promise resolve করার জন্য।
+- useState → cart state রাখার জন্য।
+- Bottle component import করা হয়েছে।
+- Bottles.css → grid layout style এর জন্য।
+
+---
+
+👉 Code:
+const Bottles = ({ bottlesPromise }) => {
+    const [cart, setCart] = useState([]);
+    const bottles = use(bottlesPromise);
+    console.log(bottles);
+
+📌 Explanation:
+- Bottles component → bottlesPromise props হিসেবে পাচ্ছে।
+- cart state → future এ cart এ যোগ করা bottles track করার জন্য।
+- use(bottlesPromise) → promise resolve করে bottles data আনে।
+- console.log(bottles) → data console এ দেখা যায়।
+
+---
+
+👉 Code:
+const handleAddToCart = (bottle) => {
+    console.log('bottle will be added to the cart', bottle)
+}
+
+📌 Explanation:
+- handleAddToCart → event handler function।
+- button click করলে bottle data console এ দেখায়।
+- Future এ setCart([...cart, bottle]) ব্যবহার করে cart update করা যাবে।
+
+---
+
+👉 Code:
+return (
+    <div>
+      <h3>Bottles: {bottles.length}</h3>
+      <div className="bottle-container">
+        {bottles.map((bottle) => (
+          <Bottle key={bottle.id} 
+          handleAddToCart={handleAddToCart}
+          bottle={bottle}></Bottle>
+        ))}
+      </div>
+    </div>
+);
+
+📌 Explanation:
+- bottles.length → মোট কতগুলো bottle আছে তা দেখায়।
+- bottle-container → CSS grid layout container।
+- bottles.map() → প্রতিটি bottle কে Bottle component এ পাঠাচ্ছে।
+- key={bottle.id} → unique key ব্যবহার করা হয়েছে।
+- handleAddToCart → child component এ props হিসেবে পাঠানো হয়েছে।
+
+---
+
+👉 Code:
+export default Bottles;
+
+📌 Explanation:
+- Bottles component export করা হয়েছে যাতে অন্য ফাইলে ব্যবহার করা যায়।
+
+---
+
+2. Bottles.css
+👉 Code:
+.bottle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+📌 Explanation:
+- display: grid → container কে grid বানাচ্ছে।
+- grid-template-columns: repeat(3, 1fr) → ৩টি column তৈরি হচ্ছে।
+- gap: 20px → column এর মধ্যে space।
+
+---
+
+3. Bottle.jsx (Child Component)
+👉 Code:
+import React from 'react';
+import './Bottle.css'
+
+📌 Explanation:
+- React import করা হয়েছে।
+- Bottle.css → bottle card style এর জন্য।
+
+---
+
+👉 Code:
+const Bottle = ({bottle, handleAddToCart}) => {
+    const {img, name, price, stock} = bottle;
+    console.log(bottle)
+
+📌 Explanation:
+- Bottle component → bottle এবং handleAddToCart props হিসেবে পাচ্ছে।
+- Destructuring → bottle object থেকে img, name, price, stock আলাদা করা হয়েছে।
+- console.log(bottle) → প্রতিটি bottle এর data console এ দেখা যায়।
+
+---
+
+👉 Code:
+return (
+    <div className='card bottle'>
+        <img src={img} alt="" />
+        <h3>{name}</h3>
+        <p>${price}</p>
+        <p>{stock} Remaining</p>
+        <button onClick={() => handleAddToCart(bottle)}>Buy Now</button>
+    </div>
+);
+
+📌 Explanation:
+- card bottle → CSS class apply হয়েছে।
+- <img src={img} /> → bottle এর image দেখাচ্ছে।
+- <h3>{name}</h3> → bottle এর নাম দেখাচ্ছে।
+- <p>${price}</p> → bottle এর দাম দেখাচ্ছে।
+- <p>{stock} Remaining</p> → কত stock আছে তা দেখাচ্ছে।
+- <button onClick={() => handleAddToCart(bottle)}>Buy Now</button> → button click করলে parent এর handleAddToCart function call হয়।
+
+---
+
+👉 Code:
+export default Bottle;
+
+📌 Explanation:
+- Bottle component export করা হয়েছে যাতে অন্য ফাইলে ব্যবহার করা যায়।
+
+---
+
+4. Bottle.css
+👉 Code:
+.bottle img {
+    width: 250px;
+}
+
+📌 Explanation:
+- bottle image এর width 250px করা হয়েছে।
+- সব image একই size এ দেখাবে।
+
+---
+
+5. Output (Example)
+Bottles: 5  
+
+👉 Grid layout এ ৩ column এ bottles দেখাবে।  
+প্রতিটি card এ থাকবে:  
+- Image  
+- Name  
+- Price  
+- Stock remaining  
+- Buy Now button  
+
+---
+
+6. Advantages
+- Grid layout → responsive এবং সুন্দর UI।
+- Parent-Child structure → reusable এবং organized।
+- Event handler → cart এ data পাঠানো যায়।
+- CSS → card সুন্দরভাবে সাজানো যায়।
+
+---
+
+📌 Summary
+- Bottles.jsx → bottles data load করে grid layout এ দেখাচ্ছে।
+- Bottle.jsx → প্রতিটি bottle card আকারে render করছে।
+- handleAddToCart → parent এ event handle করছে।
+- CSS → grid layout এবং image size control করছে।
+- Output → bottles সুন্দরভাবে ৩ column layout এ card আকারে দেখানো হচ্ছে।
+
+
+===============================
+41-5 (Recap) Create Shopping Cart to Handle Event with Parameters
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- localStorage vs sessionStorage → কোনটা ব্যবহার করা উচিত?
+- Shopping cart data কিভাবে store করা যায়?
+- React এ event handler দিয়ে cart এ item যোগ করার নিয়ম কী?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. localStorage vs sessionStorage
+📌 Explanation:
+- localStorage → data browser এ স্থায়ীভাবে থাকে (clear না করা পর্যন্ত থাকে)।  
+- sessionStorage → data শুধু current session পর্যন্ত থাকে (tab/browser বন্ধ করলে clear হয়ে যায়)।  
+👉 Shopping cart data → localStorage এ রাখা উচিত, কারণ user পরে ফিরে আসলেও cart data দেখা যাবে।
+
+---
+
+2. JSON.stringify এবং JSON.parse
+👉 Example:
+const stringified = JSON.stringify([{id: 1}, {id: 2}]);  
+localStorage.setItem('cart', stringified);  
+
+const savedCartString = localStorage.getItem('cart');  
+const savedCart = JSON.parse(savedCartString);  
+
+📌 Explanation:
+- JSON.stringify → object/array কে string এ convert করে localStorage এ save করা যায়।  
+- JSON.parse → string কে আবার object/array এ convert করে ব্যবহার করা যায়।  
+- localStorage শুধু string রাখতে পারে, তাই stringify/parse দরকার হয়।
+
+---
+
+3. Bottles.jsx (Parent Component)
+👉 Code:
+import React, { use, useState } from "react";
+import Bottle from "../Bottle/Bottle";
+import './Bottles.css'
+
+📌 Explanation:
+- React import করা হয়েছে।
+- use → Suspense এর সাথে promise resolve করার জন্য।
+- useState → cart state রাখার জন্য।
+- Bottle component import করা হয়েছে।
+- Bottles.css → grid layout style এর জন্য।
+
+---
+
+👉 Code:
+const Bottles = ({ bottlesPromise }) => {
+    const [cart, setCart] = useState([]);
+    const bottles = use(bottlesPromise);
+    console.log(bottles);
+
+📌 Explanation:
+- Bottles component → bottlesPromise props হিসেবে পাচ্ছে।
+- cart state → shopping cart এ যোগ করা bottles track করার জন্য।
+- use(bottlesPromise) → promise resolve করে bottles data আনে।
+- console.log(bottles) → data console এ দেখা যায়।
+
+---
+
+👉 Code:
+const handleAddToCart = (bottle) => {
+    const newCart = [...cart, bottle];
+    setCart(newCart);
+}
+
+📌 Explanation:
+- handleAddToCart → event handler function।
+- bottle parameter → কোন bottle add করা হচ্ছে তা পাওয়া যায়।
+- newCart = [...cart, bottle] → পুরনো cart এর সাথে নতুন bottle যোগ করা হচ্ছে।
+- setCart(newCart) → cart state update হচ্ছে।
+
+---
+
+👉 Code:
+return (
+    <div>
+      <h3>Bottles: {bottles.length}</h3>
+      <p>Added to cart: {cart.length}</p>
+      <div className="bottle-container">
+        {bottles.map((bottle) => (
+          <Bottle key={bottle.id} 
+          handleAddToCart={handleAddToCart}
+          bottle={bottle}></Bottle>
+        ))}
+      </div>
+    </div>
+);
+
+📌 Explanation:
+- bottles.length → মোট কতগুলো bottle আছে তা দেখায়।
+- cart.length → cart এ কতগুলো item আছে তা দেখায়।
+- bottle-container → CSS grid layout container।
+- bottles.map() → প্রতিটি bottle কে Bottle component এ পাঠাচ্ছে।
+- key={bottle.id} → unique key ব্যবহার করা হয়েছে।
+- handleAddToCart → child component এ props হিসেবে পাঠানো হয়েছে।
+
+---
+
+👉 Code:
+export default Bottles;
+
+📌 Explanation:
+- Bottles component export করা হয়েছে যাতে অন্য ফাইলে ব্যবহার করা যায়।
+
+---
+
+4. Bottles.css
+👉 Example:
+.bottle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+📌 Explanation:
+- display: grid → container কে grid বানাচ্ছে।
+- grid-template-columns: repeat(3, 1fr) → ৩টি column তৈরি হচ্ছে।
+- gap: 20px → column এর মধ্যে space।
+
+---
+
+5. Output (Example)
+Bottles: 5  
+Added to cart: 2  
+
+👉 Grid layout এ ৩ column এ bottles দেখাবে।  
+প্রতিটি card এ থাকবে:  
+- Image  
+- Name  
+- Price  
+- Stock remaining  
+- Buy Now button → click করলে cart এ যোগ হবে।  
+
+---
+
+6. Advantages
+- localStorage → cart data স্থায়ীভাবে রাখা যায়।
+- Event handler → parameter সহ data parent এ পাঠানো যায়।
+- State update → cart এ নতুন item যোগ করা যায়।
+- Grid layout → UI সুন্দরভাবে সাজানো যায়।
+
+---
+
+📌 Summary
+- localStorage → shopping cart data store করার জন্য সেরা জায়গা।
+- JSON.stringify/parse → object/array কে string এ convert করে localStorage এ রাখা যায়।
+- Bottles.jsx → bottles data load করে grid layout এ দেখাচ্ছে।
+- handleAddToCart → cart এ নতুন bottle যোগ করছে।
+- Output → bottles সুন্দরভাবে ৩ column layout এ card আকারে দেখানো হচ্ছে এবং cart এ item count দেখাচ্ছে।
