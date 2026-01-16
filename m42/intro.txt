@@ -34,3 +34,43 @@ Navbar with icon, indicator and dropdown
 
 
 
+
+42-3 Set Layout and make react responsive
+
+
+
+blogs.json er data ta useEffect er modhome fetch kore niye aschi.
+ouside theke kono api calling ba server side theke konno data niye ashar jonno amra useEffect use kore er vitore data ta handle kori. er fole ki hoi, jokhon e website ekbar reaload nibe tokhon useEffect tar nijer vitorer code gulo ekbar execute kore. and amra jodi kono kichir upor depend kore useeffect k execute korte cai tahole dependency ta [] ata use korte pari. kono state a jekono ekta value bosale value ta change hobe useeffect ekbar execute hobe.  eke bole dependency 
+
+
+amra jmn variable a data rakhtam temn e data rakhar jonno react wala ra usestate baniyeche.
+
+const [blogs, setBlogs] = useState([]);
+
+
+er modhe duita jiniser excess pabe ek variable(blogs) ata diye state er value check korte parben.  dui state er set er function (setBlogs) new vale add korar jonno.
+
+
+
+
+42-4 Display Blog data and hashtags
+
+
+
+const [blogs, setBlogs] = useState([]);
+
+akhane blogs er modhe 4ta object ache. ata ekta array of object. ei array er upr map calale  indivisual prottek tar indetail peye jabo. atar jonno alada component Blog name create korbo.
+
+
+Blogs.jsx
+{
+     blogs.map((blog)=> <Blog></Blog>)
+}
+blogs ke <Blog></Blog> er modhe props akare pathanor jonno 
+blogs.map((blog)=> <Blog blog={blog}></Blog>)
+
+
+
+
+
+

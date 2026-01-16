@@ -100,3 +100,638 @@ Module 42: Simple React SPA with Scribbles Café
 - Motivation → Practice বেশি করলে foundation strong হবে এবং future এ value পাওয়া যাবে।
 
 
+===============================
+42-1 Scribbles Café Project Overview and Tailwind Setup
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Vite দিয়ে React project setup কিভাবে হয়?
+- TailwindCSS এবং DaisyUI setup করার ধাপ কী?
+- Navbar component কিভাবে তৈরি করা হয়েছে?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Project Setup
+👉 Command:
+npm create vite@latest my-blogs -- --template react  
+
+📌 Explanation:
+- Vite দিয়ে নতুন React project তৈরি করা হয়েছে।
+- Template → react project structure automatically তৈরি হয়।
+- Project name → `my-blogs`।
+
+---
+
+2. TailwindCSS Setup
+👉 Command:
+npm install tailwindcss @tailwindcss/vite  
+
+📌 Explanation:
+- TailwindCSS → utility-first CSS framework।
+- @tailwindcss/vite → Vite integration plugin।
+- vite.config.ts → TailwindCSS plugin যোগ করতে হবে।
+
+👉 vite.config.ts:
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+
+📌 Explanation:
+- react() → React plugin।
+- tailwindcss() → TailwindCSS plugin।
+- plugins array → Vite project এ TailwindCSS কাজ করবে।
+
+👉 App.css:
+@import "tailwindcss";
+
+📌 Explanation:
+- TailwindCSS import করা হয়েছে।
+- Tailwind utilities এখন project এ ব্যবহার করা যাবে।
+
+---
+
+3. DaisyUI Setup
+👉 Command:
+npm i -D daisyui@latest  
+
+👉 App.css:
+@plugin "daisyui";
+
+📌 Explanation:
+- DaisyUI → TailwindCSS এর উপর ভিত্তি করে তৈরি UI component library।
+- @plugin "daisyui" → TailwindCSS এ DaisyUI plugin যোগ করা হয়েছে।
+- এখন DaisyUI এর ready-made components ব্যবহার করা যাবে।
+
+---
+
+4. App.jsx
+👉 Code:
+import './App.css'
+import Navbar from './components/Navbar/Navbar'
+
+function App() {
+  return (
+    <>
+      <Navbar></Navbar>
+    </>
+  )
+}
+export default App
+
+📌 Explanation (Line by Line):
+- import './App.css' → TailwindCSS এবং DaisyUI styles import করা হয়েছে।
+- import Navbar → Navbar component import করা হয়েছে।
+- <Navbar></Navbar> → Navbar render করা হয়েছে।
+- export default App → App component export করা হয়েছে।
+
+---
+
+5. Navbar.jsx
+src>components>Navbar>Navbar.jsx
+👉 Code:
+import React from 'react';
+
+const Navbar = () => {
+  return (
+    <div>
+      <div className="navbar bg-base-100 shadow-sm">
+        <div className="flex-1">
+          <a className="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div className="flex-none">
+          {/* Cart Dropdown */}
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+              <div className="indicator">
+                <svg ...> {/* Shopping cart icon */} </svg>
+                <span className="badge badge-sm indicator-item">8</span>
+              </div>
+            </div>
+            <div tabIndex={0} className="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
+              <div className="card-body">
+                <span className="text-lg font-bold">8 Items</span>
+                <span className="text-info">Subtotal: $999</span>
+                <div className="card-actions">
+                  <button className="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Profile Dropdown */}
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+              </div>
+            </div>
+            <ul tabIndex="-1" className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Navbar;
+
+📌 Explanation (Line by Line):
+- <div className="navbar bg-base-100 shadow-sm"> → Navbar container, background এবং shadow।
+- <div className="flex-1"> → Left side content (brand name)।
+- <a className="btn btn-ghost text-xl">daisyUI</a> → Brand link।
+- Cart Dropdown:
+  - <svg> → Shopping cart icon।
+  - <span className="badge">8</span> → Cart item count।
+  - Dropdown content → Items summary এবং "View cart" button।
+- Profile Dropdown:
+  - <img> → User avatar।
+  - <ul> → Dropdown menu with Profile, Settings, Logout।
+  - <span className="badge">New</span> → Profile badge।
+
+---
+
+6. Output (Example)
+👉 Navbar:
+- Left side → Brand name "daisyUI"।
+- Right side → Cart icon with indicator (8 items)।
+- Dropdown → Cart summary এবং "View cart" button।
+- Profile avatar → Dropdown menu with Profile, Settings, Logout।
+
+---
+
+7. Advantages
+- TailwindCSS → utility-first CSS, দ্রুত styling।
+- DaisyUI → ready-made components, সুন্দর UI।
+- Navbar → responsive এবং modern design।
+- Dropdowns → cart এবং profile সহজে manage করা যায়।
+
+---
+
+📌 Summary
+- Vite দিয়ে React project setup করা হয়েছে।
+- TailwindCSS এবং DaisyUI install ও configure করা হয়েছে।
+- App.jsx → Navbar component render করছে।
+- Navbar.jsx → Cart dropdown এবং Profile dropdown সহ modern navbar তৈরি করা হয়েছে।
+- Output → সুন্দর responsive navbar with icons, indicators, এবং dropdown menus।
+
+
+
+===============================
+42-2 Create Fake Data for Blogs and Load Data
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- blogs.json ফাইল কিভাবে তৈরি করবো?
+- JSON data কোথা থেকে পাওয়া যায়?
+- React এ useEffect দিয়ে data fetch করার syntax কী?
+- useState দিয়ে data কোথায় রাখবো?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Fake Data Creation
+👉 Example (public > blogs.json):
+[
+  {
+    "id": 1,
+    "name": "jabbar",
+    "cover": "bg"
+  }
+]
+
+📌 Explanation:
+- blogs.json → public folder এ রাখা হয়েছে।
+- প্রতিটি blog object এ id, name, cover property আছে।
+- imgbb → image upload করে direct link JSON data তে ব্যবহার করা যায়।
+- JSON data maker → online tool দিয়ে fake data তৈরি করা যায়।
+
+---
+
+2. API Calling Concept
+👉 useEffect Syntax:
+useEffect(() => {
+   // code here
+}, [])
+
+📌 Explanation:
+- useEffect → React hook, side effect handle করার জন্য।
+- [] dependency array → component mount হলে একবার run হবে।
+- fetch("blogs.json") → local JSON file থেকে data আনে।
+
+---
+
+3. Blogs.jsx Component
+👉 Code:
+import React, { useEffect, useState } from 'react';
+
+📌 Explanation:
+- React import করা হয়েছে।
+- useEffect → data fetch করার জন্য।
+- useState → blogs data state এ রাখার জন্য।
+
+---
+
+👉 Code:
+const Blogs = () => {
+    const [blogs, setBlogs] = useState([]);
+
+📌 Explanation:
+- Blogs component → blog data দেখানোর জন্য।
+- useState([]) → blogs নামে state তৈরি হয়েছে, শুরুতে empty array।
+- setBlogs → blogs state update করার জন্য function।
+
+---
+
+👉 Code (useEffect):
+useEffect(() => {
+    fetch("blogs.json")
+      .then(res => res.json())
+      .then(data => setBlogs(data))
+}, [])
+
+📌 Explanation (Line by Line):
+- useEffect → component mount হলে run হবে।
+- fetch("blogs.json") → public folder থেকে blogs.json file fetch করছে।
+- .then(res => res.json()) → response কে JSON এ convert করছে।
+- .then(data => setBlogs(data)) → blogs state এ data save করছে।
+- [] dependency array → শুধু একবার run হবে।
+
+---
+
+👉 Code:
+console.log(blogs) // (4) [{…}, {…}, {…}, {…}]
+
+📌 Explanation:
+- console.log(blogs) → blogs state এ data আসছে কিনা check করার জন্য।
+- Output → array of blog objects।
+
+---
+
+👉 Code:
+return (
+    <div>
+        {/* এখানে blogs data render করা যাবে */}
+    </div>
+);
+
+📌 Explanation:
+- return → UI render করার জায়গা।
+- এখনো blogs data দেখানো হয়নি, শুধু empty div আছে।
+- Future এ blogs.map() ব্যবহার করে blog list render করা যাবে।
+
+---
+
+👉 Code:
+export default Blogs;
+
+📌 Explanation:
+- Blogs component export করা হয়েছে।
+- অন্য ফাইলে import করে ব্যবহার করা যাবে।
+
+---
+
+4. Output (Example)
+👉 Console:
+(4) [{id:1, name:"jabbar", cover:"bg"}, {...}, {...}, {...}]  
+
+👉 UI:
+এখনো কিছু render হচ্ছে না, শুধু empty div।  
+Future এ blog list card আকারে দেখানো যাবে।  
+
+---
+
+5. Advantages
+- JSON data → সহজে fake data তৈরি করা যায়।
+- useEffect → component mount হলে data fetch করা যায়।
+- useState → data state এ রাখা যায় এবং UI তে ব্যবহার করা যায়।
+- console.log → data আসছে কিনা verify করা যায়।
+
+---
+
+📌 Summary
+- blogs.json → public folder এ fake data রাখা হয়েছে।
+- useEffect → component mount হলে blogs.json থেকে data fetch করছে।
+- useState → blogs data state এ রাখা হচ্ছে।
+- console.log → data আসছে কিনা check করা হচ্ছে।
+- Output → blogs data console এ দেখা যাচ্ছে, future এ UI তে render করা যাবে।
+
+
+
+===============================
+42-3 Set Layout and Make React Responsive
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- useEffect দিয়ে data fetch করার নিয়ম কী?
+- useState দিয়ে data কোথায় রাখা হয়?
+- Dependency array [] এর কাজ কী?
+- React layout responsive কিভাবে করা যায়?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Concept: useEffect
+📌 Explanation:
+- useEffect → React hook, side effect handle করার জন্য।
+- Component mount হলে useEffect এর ভিতরের code একবার run হয়।
+- Dependency array [] → শুধু একবার run হবে।
+- যদি dependency array এ কোনো state/variable দেওয়া হয় → সেই value change হলে useEffect আবার run হবে।
+
+👉 Example:
+useEffect(() => {
+   fetch("blogs.json")
+     .then(res => res.json())
+     .then(data => setBlogs(data))
+}, [])
+
+---
+
+2. Concept: useState
+👉 Code:
+const [blogs, setBlogs] = useState([]);
+
+📌 Explanation:
+- blogs → state variable, যেখানে data রাখা হয়।
+- setBlogs → state update করার function।
+- শুরুতে blogs = [] (empty array)।
+- পরে fetch করা data setBlogs দিয়ে blogs এ রাখা হয়।
+
+---
+
+3. App.jsx Layout
+👉 Code:
+import './App.css'
+import Blogs from './components/Blogs/Blogs'
+import Navbar from './components/Navbar/Navbar'
+
+📌 Explanation:
+- App.css → global styles import করা হয়েছে।
+- Blogs component → blog data দেখানোর জন্য।
+- Navbar component → navigation bar দেখানোর জন্য।
+
+---
+
+👉 Code:
+function App() {
+  return (
+    <>
+      <Navbar></Navbar>
+      <div className="main-container text-center flex">
+        <div className="left-container w-[70%]">
+          <Blogs></Blogs>
+        </div>
+        <div className="right-container w-[30%]">
+          <h1>Reading time: 0</h1>
+          <h1>Bookmarked count: 0</h1>
+        </div>
+      </div>
+    </>
+  )
+}
+export default App
+
+📌 Explanation (Line by Line):
+- <Navbar></Navbar> → Navbar render করছে।
+- <div className="main-container text-center flex"> → main layout container, flexbox ব্যবহার করা হয়েছে।
+- <div className="left-container w-[70%]"> → left side, Blogs component render করছে, width 70%।
+- <div className="right-container w-[30%]"> → right side, Reading time এবং Bookmarked count দেখাচ্ছে, width 30%।
+- Responsive layout → flexbox এবং Tailwind width classes দিয়ে তৈরি।
+
+---
+
+4. Blogs.jsx Component
+👉 Code:
+import React, { useEffect, useState } from 'react';
+
+📌 Explanation:
+- React import করা হয়েছে।
+- useEffect → data fetch করার জন্য।
+- useState → blogs data state এ রাখার জন্য।
+
+---
+
+👉 Code:
+const Blogs = () => {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        fetch("blogs.json")
+          .then(res => res.json())
+          .then(data => setBlogs(data))
+    }, [])
+
+    console.log(blogs)
+    return (
+        <div>
+            <h1 className='text-3xl'>total: {blogs.length}</h1>
+        </div>
+    );
+};
+export default Blogs;
+
+📌 Explanation (Line by Line):
+- const [blogs, setBlogs] = useState([]) → blogs state তৈরি হয়েছে।
+- useEffect(() => { fetch("blogs.json")... }, []) → blogs.json থেকে data fetch করছে।
+- .then(res => res.json()) → response কে JSON এ convert করছে।
+- .then(data => setBlogs(data)) → blogs state এ data save করছে।
+- console.log(blogs) → blogs data console এ দেখা যাচ্ছে।
+- <h1 className='text-3xl'>total: {blogs.length}</h1> → blogs এর সংখ্যা UI তে দেখাচ্ছে।
+
+---
+
+5. Output (Example)
+👉 UI:
+- Navbar উপরে।
+- Left side → Blogs component, total blogs count।
+- Right side → Reading time এবং Bookmarked count।
+- Responsive layout → flexbox দিয়ে দুই ভাগে ভাগ করা হয়েছে (70% + 30%)।
+
+👉 Console:
+- blogs data array দেখা যাবে → [{id:1, name:"jabbar", cover:"bg"}, {...}, {...}]
+
+---
+
+6. Advantages
+- useEffect → data fetch করার জন্য perfect।
+- useState → data state এ রাখা যায় এবং UI তে ব্যবহার করা যায়।
+- Dependency array → control করে কখন useEffect run হবে।
+- Flexbox + Tailwind → responsive layout তৈরি করা যায়।
+- Clear separation → Navbar, Blogs, এবং Sidebar আলাদা component।
+
+---
+
+📌 Summary
+- blogs.json → public folder থেকে data fetch করা হয়েছে।
+- useEffect → component mount হলে data fetch করছে।
+- useState → blogs data state এ রাখা হচ্ছে।
+- App.jsx → responsive layout তৈরি করেছে (Navbar + Blogs + Sidebar)।
+- Blogs.jsx → blogs count UI তে দেখাচ্ছে।
+- Output → responsive two-column layout, blogs data console এ দেখা যাচ্ছে।
+
+
+
+===============================
+42-4 Display Blog Data and Hashtags
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- blogs.json থেকে data কিভাবে fetch করবো?
+- blogs array কে map করে কিভাবে individual blog দেখাবো?
+- Props দিয়ে child component এ data পাঠানোর নিয়ম কী?
+- Blog component এ data কিভাবে render হচ্ছে?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Concept: Array of Objects
+📌 Explanation:
+- blogs.json → ৪টি object আছে।
+- প্রতিটি object → একটি blog এর data (id, title, cover, hashtags ইত্যাদি)।
+- blogs state → এই array of objects রাখে।
+- blogs.map() → প্রতিটি object কে loop করে individual Blog component এ পাঠায়।
+
+👉 Example:
+blogs.map((blog) => <Blog blog={blog}></Blog>)
+
+---
+
+2. Blogs.jsx Component
+👉 Code:
+import React, { useEffect, useState } from 'react';
+import Blog from '../Blog/Blog';
+
+📌 Explanation:
+- React import করা হয়েছে।
+- useEffect → data fetch করার জন্য।
+- useState → blogs data state এ রাখার জন্য।
+- Blog component → প্রতিটি blog render করার জন্য।
+
+---
+
+👉 Code:
+const Blogs = () => {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        fetch("blogs.json")
+          .then(res => res.json())
+          .then(data => setBlogs(data))
+    }, [])
+
+    console.log(blogs)
+
+📌 Explanation (Line by Line):
+- const [blogs, setBlogs] = useState([]) → blogs state তৈরি হয়েছে।
+- useEffect(() => {...}, []) → component mount হলে run হবে।
+- fetch("blogs.json") → public folder থেকে blogs.json file fetch করছে।
+- .then(res => res.json()) → response কে JSON এ convert করছে।
+- .then(data => setBlogs(data)) → blogs state এ data save করছে।
+- console.log(blogs) → blogs data console এ দেখা যাচ্ছে।
+
+---
+
+👉 Code:
+return (
+    <div>
+        <h1 className='text-3xl'>total: {blogs.length}</h1>
+        <div className="all-blogs grid grid-cols-2">
+            {
+                blogs.map((blog) => <Blog blog={blog}></Blog>)
+            }
+        </div>
+    </div>
+);
+export default Blogs;
+
+📌 Explanation (Line by Line):
+- <h1 className='text-3xl'>total: {blogs.length}</h1> → blogs এর সংখ্যা UI তে দেখাচ্ছে।
+- <div className="all-blogs grid grid-cols-2"> → TailwindCSS দিয়ে grid layout (২ column) তৈরি হয়েছে।
+- blogs.map((blog) => <Blog blog={blog}></Blog>) → প্রতিটি blog object কে Blog component এ পাঠানো হচ্ছে props আকারে।
+- export default Blogs → Blogs component অন্য ফাইলে ব্যবহার করা যাবে।
+
+---
+
+3. Blog.jsx Component
+👉 Code:
+import React from 'react';
+
+const Blog = ({blog}) => {
+    console.log(blog);
+    return (
+        <div>
+            <div className="card bg-base-100 w-96 shadow-sm">
+              <figure>
+                <img src={blog.cover} alt="Shoes" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{blog.title}</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">Mark as read</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    );
+};
+export default Blog;
+
+📌 Explanation (Line by Line):
+- const Blog = ({blog}) → props থেকে blog object পাওয়া যাচ্ছে।
+- console.log(blog) → প্রতিটি blog এর data console এ দেখা যাচ্ছে।
+- <div className="card bg-base-100 w-96 shadow-sm"> → DaisyUI card component।
+- <figure><img src={blog.cover} alt="Shoes" /></figure> → blog এর cover image দেখাচ্ছে।
+- <h2 className="card-title">{blog.title}</h2> → blog এর title দেখাচ্ছে।
+- <p>...</p> → description placeholder।
+- <button className="btn btn-primary">Mark as read</button> → button, future এ event handler যোগ করা যাবে।
+- export default Blog → Blog component অন্য ফাইলে ব্যবহার করা যাবে।
+
+---
+
+4. Output (Example)
+👉 UI:
+- Blogs count → total: 4
+- Grid layout → ২ column এ blogs দেখাবে।
+- প্রতিটি blog card এ থাকবে:
+  - Cover image
+  - Title
+  - Description
+  - "Mark as read" button
+
+👉 Console:
+- প্রতিটি blog object data দেখা যাবে।
+
+---
+
+5. Advantages
+- blogs.map() → array থেকে প্রতিটি blog আলাদা করে দেখানো যায়।
+- Props → parent থেকে child এ data পাঠানো যায়।
+- DaisyUI card → সুন্দর UI component।
+- Tailwind grid → responsive layout।
+- Clear separation → Blogs.jsx (list) এবং Blog.jsx (single item)।
+
+---
+
+📌 Summary
+- blogs.json → public folder থেকে data fetch করা হয়েছে।
+- useEffect → component mount হলে data fetch করছে।
+- useState → blogs data state এ রাখা হচ্ছে।
+- Blogs.jsx → blogs.map() দিয়ে Blog component এ data পাঠাচ্ছে।
+- Blog.jsx → প্রতিটি blog card আকারে render করছে।
+- Output → সুন্দর responsive grid layout এ blogs data UI তে দেখা যাচ্ছে।
+
+
+
