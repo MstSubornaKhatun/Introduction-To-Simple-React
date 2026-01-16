@@ -735,3 +735,159 @@ export default Blog;
 
 
 
+===============================
+42-5 Add Bookmark Button
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React Icons কিভাবে install এবং ব্যবহার করবো?
+- Blog component এ bookmark icon কিভাবে যোগ করবো?
+- Props দিয়ে icon এর size কিভাবে নিয়ন্ত্রণ করবো?
+- hashtags array কিভাবে render করবো?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. React Icons Setup
+👉 Command:
+npm install react-icons --save  
+
+👉 Import:
+import { FaBookmark } from "react-icons/fa";
+
+📌 Explanation:
+- react-icons → জনপ্রিয় icon library।
+- FaBookmark → FontAwesome এর bookmark icon।
+- <FaBookmark size={25}/> → JSX এ icon render করা যায় এবং props দিয়ে size নিয়ন্ত্রণ করা যায়।
+
+---
+
+2. Blog.jsx Component
+👉 Code:
+import React from "react";
+import { FaBookmark } from "react-icons/fa";
+
+📌 Explanation:
+- React import করা হয়েছে।
+- FaBookmark → bookmark icon import করা হয়েছে।
+
+---
+
+👉 Code:
+const Blog = ({ blog }) => {
+  console.log(blog);
+
+📌 Explanation:
+- Blog component → props থেকে blog object পাচ্ছে।
+- console.log(blog) → প্রতিটি blog এর data console এ দেখা যাচ্ছে।
+
+---
+
+👉 Code:
+return (
+  <div className="m-2">
+    <div className="card bg-base-100 w-96 shadow-sm">
+      <figure>
+        <img src={blog.cover} alt="Shoes" />
+      </figure>
+
+📌 Explanation:
+- <div className="m-2"> → margin 2 units।
+- <div className="card ..."> → DaisyUI card component।
+- <figure><img src={blog.cover} alt="Shoes" /></figure> → blog এর cover image দেখাচ্ছে।
+
+---
+
+👉 Code:
+<div className="card-body">
+  <div className="author flex justify-around items-center">
+    <h3>{blog.author}</h3>
+    <img className="w-16" src={blog.author_img} alt="" />
+    <FaBookmark size={25}/>
+  </div>
+
+📌 Explanation:
+- <div className="card-body"> → card এর content অংশ।
+- <div className="author flex ..."> → author section, flexbox দিয়ে horizontally সাজানো।
+- <h3>{blog.author}</h3> → blog এর author নাম।
+- <img className="w-16" src={blog.author_img} /> → author এর image।
+- <FaBookmark size={25}/> → bookmark icon, size 25px।
+
+---
+
+👉 Code:
+<h2 className="card-title">{blog.title}</h2>
+<p>
+  A card component has a figure, a body part, and inside body there are title and actions parts
+</p>
+
+📌 Explanation:
+- <h2 className="card-title">{blog.title}</h2> → blog এর title দেখাচ্ছে।
+- <p>...</p> → description placeholder।
+
+---
+
+👉 Code:
+<div>
+  {
+    blog.hashtags.map((has) => <p>{has}</p>)
+  }
+</div>
+
+📌 Explanation:
+- blog.hashtags → array of hashtags।
+- .map((has) => <p>{has}</p>) → প্রতিটি hashtag আলাদা <p> tag এ দেখানো হচ্ছে।
+
+---
+
+👉 Code:
+<div className="card-actions justify-end">
+  <button className="btn btn-primary">Mark as read</button>
+</div>
+
+📌 Explanation:
+- <div className="card-actions justify-end"> → card এর action section।
+- <button className="btn btn-primary">Mark as read</button> → DaisyUI button, future এ event handler যোগ করা যাবে।
+
+---
+
+👉 Code:
+export default Blog;
+
+📌 Explanation:
+- Blog component export করা হয়েছে।
+- অন্য ফাইলে import করে ব্যবহার করা যাবে।
+
+---
+
+3. Output (Example)
+👉 UI:
+- Blog card → cover image, author name, author image, bookmark icon।
+- Title → blog এর শিরোনাম।
+- Description → placeholder text।
+- Hashtags → array থেকে map করে দেখানো হয়েছে।
+- Button → "Mark as read"।
+
+👉 Console:
+- প্রতিটি blog object data দেখা যাবে।
+
+---
+
+4. Advantages
+- React Icons → সহজে সুন্দর icon যোগ করা যায়।
+- Props (size) → icon এর size নিয়ন্ত্রণ করা যায়।
+- Hashtags array → map করে dynamicভাবে render করা যায়।
+- DaisyUI card → সুন্দর UI structure।
+- Clear separation → Blog component reusable।
+
+---
+
+📌 Summary
+- React Icons install এবং FaBookmark import করা হয়েছে।
+- Blog.jsx → blog data card আকারে render করছে।
+- Author section → author name, image, এবং bookmark icon দেখাচ্ছে।
+- Hashtags → array থেকে map করে দেখানো হয়েছে।
+- Button → "Mark as read" future এ event handler এর জন্য।
+- Output → সুন্দর responsive blog card with bookmark icon।
+
+
