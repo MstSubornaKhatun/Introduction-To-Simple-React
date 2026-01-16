@@ -1,0 +1,36 @@
+Knowledge Cafe 
+42-1 Scribbles Cafe Project Overview and Tailwind setup
+
+
+open vite: see installation process and install.
+my-blogs
+
+
+tailwindcss and deisyUI setup korbo.
+
+
+
+tailwindcss install: 
+open tailwindcss website: Installation --> Using Vite --> npm install tailwindcss @tailwindcss/vite
+
+
+vite.config.ts
+import tailwindcss from '@tailwindcss/vite'
+   tailwindcss(),
+
+
+
+CSS (App.css)
+@import "tailwindcss";
+
+
+
+daisyUI:
+Install: npm i -D daisyui@latest
+App.css: @plugin "daisyui";
+
+navbar: 
+Navbar with icon, indicator and dropdown
+
+
+
