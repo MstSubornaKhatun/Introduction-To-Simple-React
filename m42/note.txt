@@ -891,3 +891,195 @@ export default Blog;
 - Output → সুন্দর responsive blog card with bookmark icon।
 
 
+
+===============================
+42-6 Handle Bookmark State and Display Bookmark (Lift Up the State)
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Bookmark click করলে data কোথায় রাখবো?
+- State কে central জায়গায় (App.jsx) lift up করার কারণ কী?
+- Props দিয়ে function child component এ পাঠানোর নিয়ম কী?
+- Bookmark করা data UI তে কিভাবে দেখাবো?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Concept: Lift Up the State
+📌 Explanation:
+- Blog component → bookmark icon আছে।
+- Blog component → App.jsx এর ভিতরে নেই, বরং Blogs.jsx এর ভিতরে।
+- Bookmark click করলে data store করতে হবে।
+- State central জায়গায় রাখতে হবে → App.jsx এ।
+- কারণ: App.jsx থেকে সব child component এ state share করা যাবে।
+
+---
+
+2. App.jsx Component
+👉 Code:
+import { useState } from 'react'
+import './App.css'
+import Blogs from './components/Blogs/Blogs'
+import Navbar from './components/Navbar/Navbar'
+
+📌 Explanation:
+- useState → bookmark state রাখার জন্য।
+- Blogs এবং Navbar component import করা হয়েছে।
+
+---
+
+👉 Code:
+function App() {
+  const [bookmarked, setBookmarked] = useState([])
+
+  const handleBookMark = (blog) => {
+    setBookmarked([...bookmarked, blog])
+  }
+  console.log(bookmarked)
+
+📌 Explanation (Line by Line):
+- const [bookmarked, setBookmarked] = useState([]) → bookmarked state তৈরি হয়েছে, শুরুতে empty array।
+- handleBookMark(blog) → bookmark button click করলে blog object state এ যোগ করা হচ্ছে।
+- setBookmarked([...bookmarked, blog]) → পুরনো bookmarked array এর সাথে নতুন blog যোগ করা হচ্ছে।
+- console.log(bookmarked) → bookmarked state console এ দেখা যাচ্ছে।
+
+---
+
+👉 Code:
+return (
+  <>
+    <Navbar></Navbar>
+    <div className="main-container text-center flex">
+      <div className="left-container w-[70%]">
+        <Blogs handleBookMark={handleBookMark}></Blogs>
+      </div>
+      <div className="right-container w-[30%]">
+        <h1>Reading time: 0</h1>
+        <h1>Bookmarked count: 0</h1>
+        {
+          bookmarked.map((marked) => <p>{marked.title}</p>)
+        }
+      </div>
+    </div>
+  </>
+)
+export default App
+
+📌 Explanation (Line by Line):
+- <Navbar></Navbar> → Navbar render করছে।
+- <Blogs handleBookMark={handleBookMark}></Blogs> → Blogs component এ handleBookMark function props হিসেবে পাঠানো হয়েছে।
+- <div className="right-container"> → sidebar section।
+- <h1>Reading time: 0</h1> → placeholder।
+- <h1>Bookmarked count: 0</h1> → placeholder।
+- bookmarked.map((marked) => <p>{marked.title}</p>) → bookmarked blogs এর title UI তে দেখাচ্ছে।
+
+---
+
+3. Blogs.jsx Component
+👉 Code:
+import React, { useEffect, useState } from 'react';
+import Blog from '../Blog/Blog';
+
+const Blogs = ({handleBookMark}) => {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        fetch("blogs.json").then(res => res.json()).then(data => setBlogs(data))
+    }, [])
+
+    return (
+        <div>
+            <h1 className='text-3xl'>total: {blogs.length}</h1>
+            <div className="all-blogs grid grid-cols-2">
+                {
+                    blogs.map((blog) => <Blog key={blog.id} handleBookMark={handleBookMark} blog={blog}></Blog>)
+                }
+            </div>
+        </div>
+    );
+};
+export default Blogs;
+
+📌 Explanation (Line by Line):
+- const [blogs, setBlogs] = useState([]) → blogs state তৈরি হয়েছে।
+- useEffect → blogs.json থেকে data fetch করছে।
+- blogs.map(...) → প্রতিটি blog কে Blog component এ পাঠাচ্ছে।
+- handleBookMark → Blog component এ props হিসেবে পাঠানো হয়েছে।
+- key={blog.id} → unique key।
+
+---
+
+4. Blog.jsx Component
+👉 Code:
+import React from "react";
+import { FaBookmark } from "react-icons/fa";
+
+const Blog = ({ blog, handleBookMark }) => {
+  return (
+    <div className="m-2">
+      <div className="card bg-base-100 w-96 shadow-sm">
+        <figure>
+          <img src={blog.cover} alt="Shoes" />
+        </figure>
+        <div className="card-body">
+          <div className="author flex justify-around items-center">
+            <h3>{blog.author}</h3>
+            <img className="w-16" src={blog.author_img} alt="" />
+            <button onClick={() => handleBookMark(blog)}><FaBookmark size={25}/></button>
+          </div>
+          <h2 className="card-title">{blog.title}</h2>
+          <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+          <div>
+            {blog.hashtags.map((has) => <p>{has}</p>)}
+          </div>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Mark as read</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Blog;
+
+📌 Explanation (Line by Line):
+- Blog component → props থেকে blog এবং handleBookMark পাচ্ছে।
+- <img src={blog.cover}/> → blog এর cover image।
+- <h3>{blog.author}</h3> → author name।
+- <img src={blog.author_img}/> → author image।
+- <button onClick={() => handleBookMark(blog)}><FaBookmark size={25}/></button> → bookmark icon, click করলে blog object App.jsx এ পাঠানো হচ্ছে।
+- <h2>{blog.title}</h2> → blog title।
+- blog.hashtags.map(...) → hashtags array render করছে।
+- <button className="btn btn-primary">Mark as read</button> → read button।
+
+---
+
+5. Output (Example)
+👉 UI:
+- Left side → Blogs list with bookmark icon।
+- Right side → Bookmarked blogs এর title দেখাচ্ছে।
+- Bookmark click করলে blog title sidebar এ যোগ হবে।
+
+👉 Console:
+- bookmarked array → clicked blog objects দেখা যাবে।
+
+---
+
+6. Advantages
+- State lift up → App.jsx এ central state রাখা হয়েছে।
+- Props → function child component এ পাঠানো হয়েছে।
+- Bookmark click → blog object state এ যোগ হচ্ছে।
+- UI → sidebar এ bookmarked blogs দেখানো হচ্ছে।
+- Clear separation → App.jsx (state), Blogs.jsx (list), Blog.jsx (single item)।
+
+---
+
+📌 Summary
+- Bookmark state central জায়গায় App.jsx এ রাখা হয়েছে।
+- handleBookMark function → App.jsx থেকে Blogs এবং Blog এ পাঠানো হয়েছে।
+- Bookmark click করলে blog object bookmarked state এ যোগ হচ্ছে।
+- Sidebar এ bookmarked blogs এর title দেখানো হচ্ছে।
+- Output → responsive layout with bookmark functionality।
+
+
+

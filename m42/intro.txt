@@ -89,3 +89,45 @@ import { FaBookmark } from "react-icons/fa";
 
 
 
+42-6 Handle bookmark state and display bookmark And lift up the state
+
+bookmark niye kaj korbo.
+bookmark er icon ta Blog component er modhe ache. 
+Blog component ta App.jsx er modhe nai. 
+App.jsx er modhe ache Blogs. 
+Blogs er vitore ache Blog
+bookmark a click korle kono ekta data bookmark hobe. seta abe kono state er modhe store korte hobe. sei state theke niye ui te dekhate hobe.
+tai sei state take central ekta jaigai rakhbo.
+tai ata App.jsx er modhe korbo jate porobortite seta App.jsx er joto gulo children ache sob gulor modhe share korte parbo.
+
+
+
+App.jsx er modhe handleBookMark name ekta array function likhbo and sei function ta 1st a Blogs er modhe pathabo erpor Blogs er modhe theke Blog er modhe pathebo. 
+
+
+<button onClick={()=>handleBookMark(blog)}><FaBookmark size={25}/></button>
+            {/* jevabe argument and perameter diye data pass kortam setar moto kore akhan theke o data pass korte pari */}
+            {/* jetar upor click korchi sompurno ta pathai dibo. blog er upor click korchi atai sompurno blog pathai dibo */}
+
+
+ const handleBookMark = (blog) => {
+console.log(blog)
+  }
+
+akhn jetar bookmark te click korbo setar sompurno data ta paabo
+
+
+
+
+const [bookmarked, setBookmarked] = useState([])
+
+jehetu function er modhe theke jetar bookmark te click korle setar sompurno data ta paachi tai akhn  state declate kore state er modhe rekhe dite pari.  
+
+
+
+
+jehetu bookmark a click korle data gulo paschi. sehetu akhn map caliye sei data gulo right-container er modhe dekhabo
+
+
+
+hello
