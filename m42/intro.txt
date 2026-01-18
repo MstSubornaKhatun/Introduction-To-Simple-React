@@ -136,6 +136,11 @@ mark as read btn a click korle json er reading data ta dekhabo
 
 
 
+42-8 Remove bookmark after read
+
+
+ 
+bookmark kora thakle mark as read a click korle bookmark theke delete hoye jabe. ata id er sahajhe korbo.
 
 
 

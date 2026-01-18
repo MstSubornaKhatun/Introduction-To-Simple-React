@@ -23,7 +23,7 @@ const Blog = ({ blog, handleBookMark, handleMarkAsRead }) => {
           </p>
           <div>
           {
-            blog.hashtags.map((has) => <p>{has}</p>)
+            blog.hashtags.map((has) => <p key={has}>{has}</p>)
           }
 
           </div>
