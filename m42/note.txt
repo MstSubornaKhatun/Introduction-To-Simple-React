@@ -1476,3 +1476,98 @@ export default Blog;
 - Output → responsive layout with bookmark add/remove এবং reading time functionality।
 
 
+===============================
+42-9 Deploy to Surge
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- React project কে Surge এ deploy করার ধাপ কী?
+- npm run build করলে কী হয়?
+- Surge এ প্রথমবার deploy করার সময় কী কী দিতে হয়?
+- Domain স্থায়ী রাখার জন্য CNAME ফাইল কেন দরকার?
+- প্রতিটি ধাপ কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Build the Project
+👉 Command:
+npm run build  
+
+📌 Explanation:
+- React project কে production-ready বানানোর জন্য build করতে হয়।
+- এই command → Vite project কে optimize করে।
+- dist নামে একটি folder তৈরি হয় → এর ভিতরে optimized HTML, CSS, JS থাকে।
+- dist folder → deploy করার জন্য প্রস্তুত।
+
+---
+
+2. Deploy to Surge
+👉 Command:
+surge dist  
+
+📌 Explanation:
+- dist folder কে Surge server এ upload করে।
+- প্রথমবার deploy করার সময়:
+  - Email দিতে হবে।
+  - Password দিতে হবে।
+  - Domain name দিতে হবে (যেমন: myproject.surge.sh)।
+- Deploy complete হলে একটি URL পাওয়া যাবে।
+
+---
+
+3. Fix Domain with CNAME
+👉 Step:
+- Domain URL copy করে public folder এর ভিতরে CNAME নামে একটি ফাইল তৈরি করতে হবে।
+- সেই ফাইলে domain URL paste করতে হবে।
+
+📌 Explanation:
+- CNAME ফাইল → Surge কে বলে দেয় কোন domain ব্যবহার করতে হবে।
+- একবার domain fix করলে → পরবর্তী deploy এ domain পরিবর্তন হবে না।
+- Future এ শুধু build এবং deploy করলে একই domain এ update হবে।
+
+---
+
+4. Update Code and Redeploy
+👉 Commands:
+npm run build  
+surge dist  
+
+📌 Explanation:
+- Code update করলে আবার build করতে হবে।
+- dist folder নতুনভাবে তৈরি হবে।
+- surge dist → নতুন dist folder deploy করবে।
+- Domain একই থাকবে কারণ CNAME ফাইল সেট করা আছে।
+
+---
+
+5. Output (Example)
+👉 Terminal Steps:
+- npm run build → dist folder তৈরি।
+- surge dist → deploy শুরু।
+- Email, password, domain → প্রথমবার দিতে হবে।
+- Domain URL → যেমন `scribbles-cafe.surge.sh`।
+- Public/CNAME → `scribbles-cafe.surge.sh` লিখে রাখলে domain স্থায়ী হবে।
+
+👉 Browser:
+- Domain URL এ গিয়ে React project দেখা যাবে।
+
+---
+
+6. Advantages
+- Surge → সহজ এবং দ্রুত deploy system।
+- npm run build → optimized production build তৈরি করে।
+- CNAME → domain স্থায়ী রাখে।
+- Redeploy → শুধু build এবং surge dist করলেই update হয়।
+- Free hosting → ছোট React project deploy করার জন্য perfect।
+
+---
+
+📌 Summary
+- React project deploy করার জন্য প্রথমে npm run build করতে হয়।
+- dist folder তৈরি হয় → deploy এর জন্য।
+- surge dist → project Surge এ deploy করে।
+- প্রথমবার email, password, domain দিতে হয়।
+- Domain স্থায়ী রাখতে public/CNAME ফাইল ব্যবহার করতে হয়।
+- Future এ code update করলে আবার build এবং surge dist করলেই project update হয়।
+
+

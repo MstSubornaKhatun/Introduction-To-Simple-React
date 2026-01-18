@@ -144,6 +144,17 @@ bookmark kora thakle mark as read a click korle bookmark theke delete hoye jabe.
 
 
 
+42-9 deploy to surge
+
+1st a terminal a  npm run build korte hobe surge a koren ba netlify te koren . ata korle dist name ekta folder create hobe. again terminal a surge dist . 1st time email and password dite hobe. erpor domain dibe. ai domain url ta copy kore public folder er modhe CNAME er modhe paste kore dibo. tahole next time code update kore deploy korleo domain url change hobe na.
+ 
+code update korle abr...
+npm run build
+surge dist
+
+
+
+
 
 
 
