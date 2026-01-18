@@ -15,12 +15,23 @@ function App() {
   }
   console.log(bookmarked)
 
-  const handleMarkAsRead = (time) => {
-    // console.log(time)
+// akhane handleMarkAsRead function er modhe id ta recive korlam
+  const handleMarkAsRead = (time, id) => {
     const newTime = readingCount+time;
     setReadingCount(newTime)
+
+    console.log(id)
+    handleRemoveFromBookmark(id)
+
   }
-  console.log(readingCount)
+
+
+const handleRemoveFromBookmark = (id) => {
+  const remainingBookMark = bookmarked.filter((mark)=>mark.id !== id);
+  console.log(remainingBookMark)
+  setBookmarked(remainingBookMark)
+
+}
 
   return (
     <>
@@ -38,7 +49,7 @@ function App() {
         <h1>Bookmarked count: {bookmarked.length}</h1>
 
         {
-          bookmarked.map((marked)=><p>{marked.title}</p> )
+          bookmarked.map((marked)=><p key={marked.id} className='bg-red-600 p-2 shadow m-2 text-white'>{marked.title}</p> )
         }
       </div>
     </div>

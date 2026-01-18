@@ -1290,3 +1290,189 @@ export default Blog;
 - Output → responsive layout with bookmark and reading time functionality।
 
 
+===============================
+42-8 Remove Bookmark After Read
+===============================
+
+🎯 Cue (কী-ওয়ার্ড / প্রশ্ন)
+- Bookmark করা blog কে "Mark as read" করলে কিভাবে remove করবো?
+- State central জায়গায় (App.jsx) রাখার কারণ কী?
+- Props দিয়ে function child component এ পাঠানোর নিয়ম কী?
+- Filter ব্যবহার করে bookmarked list থেকে item remove করার নিয়ম কী?
+- প্রতিটি line of code কী করছে?
+
+📝 Notes (বিস্তারিত তথ্য)
+
+1. Concept: Remove Bookmark After Read
+📌 Explanation:
+- Bookmark করা blog → bookmarked state এ রাখা হয়।
+- "Mark as read" button এ click করলে:
+  1. সেই blog এর reading_time যোগ হবে।
+  2. সেই blog bookmarked list থেকে remove হবে।
+- Remove করার জন্য filter ব্যবহার করা হয়েছে → id দিয়ে match করে বাদ দেওয়া হয়েছে।
+
+---
+
+2. App.jsx Component
+👉 Code:
+import { useState } from 'react'
+import './App.css'
+import Blogs from './components/Blogs/Blogs'
+import Navbar from './components/Navbar/Navbar'
+
+📌 Explanation:
+- useState → state তৈরি করার জন্য।
+- Blogs এবং Navbar component import করা হয়েছে।
+
+---
+
+👉 Code:
+function App() {
+  const [bookmarked, setBookmarked] = useState([])
+  const [readingCount, setReadingCount] = useState(0)
+
+📌 Explanation:
+- bookmarked → bookmarked blogs এর list।
+- readingCount → মোট পড়ার সময় track করছে।
+- setBookmarked এবং setReadingCount → state update করার function।
+
+---
+
+👉 Code (handle functions):
+const handleBookMark = (blog) => {
+  setBookmarked([...bookmarked, blog])
+}
+console.log(bookmarked)
+
+const handleMarkAsRead = (time, id) => {
+  const newTime = readingCount + time;
+  setReadingCount(newTime)
+
+  console.log(id)
+  handleRemoveFromBookmark(id)
+}
+
+const handleRemoveFromBookmark = (id) => {
+  const remainingBookMark = bookmarked.filter((mark) => mark.id !== id);
+  console.log(remainingBookMark)
+  setBookmarked(remainingBookMark)
+}
+
+📌 Explanation (Line by Line):
+- handleBookMark(blog) → bookmark button click করলে blog object bookmarked state এ যোগ হচ্ছে।
+- setBookmarked([...bookmarked, blog]) → পুরনো array এর সাথে নতুন blog যোগ করা হচ্ছে।
+- handleMarkAsRead(time, id) → "Mark as read" button click করলে:
+  - reading_time যোগ হচ্ছে।
+  - handleRemoveFromBookmark(id) call হচ্ছে।
+- handleRemoveFromBookmark(id) → bookmarked array থেকে সেই id বাদ দিয়ে নতুন array তৈরি করছে।
+- setBookmarked(remainingBookMark) → bookmarked state update করছে।
+
+---
+
+👉 Code (return):
+return (
+  <>
+    <Navbar></Navbar>
+    <div className="main-container text-center flex">
+      <div className="left-container w-[70%]">
+        <Blogs handleBookMark={handleBookMark} handleMarkAsRead={handleMarkAsRead}></Blogs>
+      </div>
+      <div className="right-container w-[30%]">
+        <h1>Reading time: {readingCount}</h1>
+        <h1>Bookmarked count: {bookmarked.length}</h1>
+        {
+          bookmarked.map((marked) => <p key={marked.id} className='bg-red-600 p-2 shadow m-2 text-white'>{marked.title}</p>)
+        }
+      </div>
+    </div>
+  </>
+)
+export default App
+
+📌 Explanation (Line by Line):
+- <Navbar></Navbar> → Navbar render করছে।
+- <Blogs handleBookMark={handleBookMark} handleMarkAsRead={handleMarkAsRead}></Blogs> → Blogs component এ functions props হিসেবে পাঠানো হয়েছে।
+- <h1>Reading time: {readingCount}</h1> → মোট পড়ার সময় UI তে দেখাচ্ছে।
+- <h1>Bookmarked count: {bookmarked.length}</h1> → bookmarked blogs এর সংখ্যা দেখাচ্ছে।
+- bookmarked.map(...) → bookmarked blogs এর title UI তে দেখাচ্ছে, styled with Tailwind classes।
+
+---
+
+3. Blog.jsx Component
+👉 Code:
+import React from "react";
+import { FaBookmark } from "react-icons/fa";
+
+const Blog = ({ blog, handleBookMark, handleMarkAsRead }) => {
+  return (
+    <div className="m-2">
+      <div className="card bg-base-100 w-96 shadow-sm">
+        <figure>
+          <img src={blog.cover} alt="Shoes" />
+        </figure>
+        <div className="card-body">
+          <div className="author flex justify-around items-center">
+            <h3>{blog.author}</h3>
+            <img className="w-16" src={blog.author_img} alt="" />
+            <button onClick={() => handleBookMark(blog)}><FaBookmark size={25}/></button>
+          </div>
+          <h2 className="card-title">{blog.title}</h2>
+          <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+          <div>
+            {blog.hashtags.map((has) => <p>{has}</p>)}
+          </div>
+          <div className="card-actions justify-end">
+            <button onClick={() => handleMarkAsRead(blog.reading_time, blog.id)} className="btn btn-primary">Mark as read</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Blog;
+
+📌 Explanation (Line by Line):
+- Blog component → props থেকে blog object এবং functions পাচ্ছে।
+- <img src={blog.cover}/> → blog এর cover image।
+- <h3>{blog.author}</h3> → author name।
+- <img src={blog.author_img}/> → author image।
+- <button onClick={() => handleBookMark(blog)}><FaBookmark size={25}/></button> → bookmark icon, click করলে blog object App.jsx এ পাঠানো হচ্ছে।
+- <h2>{blog.title}</h2> → blog title।
+- blog.hashtags.map(...) → hashtags array render করছে।
+- <button onClick={() => handleMarkAsRead(blog.reading_time, blog.id)} className="btn btn-primary">Mark as read</button> → click করলে blog এর reading_time এবং id App.jsx এ পাঠানো হচ্ছে।
+
+---
+
+4. Output (Example)
+👉 UI:
+- Left side → Blogs list with bookmark and "Mark as read" button।
+- Right side → Reading time এবং bookmarked blogs এর title দেখাচ্ছে।
+- Bookmark click → blog title sidebar এ যোগ হবে।
+- "Mark as read" click → readingCount state এ সময় যোগ হবে এবং সেই blog bookmarked list থেকে remove হবে।
+
+👉 Console:
+- bookmarked array → clicked blog objects দেখা যাবে।
+- remainingBookMark → filter করার পর নতুন array দেখা যাবে।
+
+---
+
+5. Advantages
+- State lift up → App.jsx এ central state রাখা হয়েছে।
+- Props → functions child component এ পাঠানো হয়েছে।
+- Bookmark click → blog object bookmarked state এ যোগ হচ্ছে।
+- "Mark as read" click → readingCount state এ সময় যোগ হচ্ছে এবং bookmarked থেকে remove হচ্ছে।
+- Filter → সহজে id দিয়ে item remove করা যায়।
+- UI → sidebar এ bookmarked blogs এবং মোট পড়ার সময় দেখানো হচ্ছে।
+
+---
+
+📌 Summary
+- Bookmark এবং reading time central state এ App.jsx এ রাখা হয়েছে।
+- handleBookMark → blog object bookmarked state এ যোগ করছে।
+- handleMarkAsRead → blog এর reading_time যোগ করছে এবং bookmarked থেকে remove করছে।
+- handleRemoveFromBookmark → filter দিয়ে bookmarked list থেকে blog remove করছে।
+- Blogs.jsx → Blog component এ functions পাঠাচ্ছে।
+- Blog.jsx → bookmark এবং "Mark as read" button দিয়ে event trigger করছে।
+- Output → responsive layout with bookmark add/remove এবং reading time functionality।
+
+

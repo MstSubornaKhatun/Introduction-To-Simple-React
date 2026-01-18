@@ -130,4 +130,15 @@ jehetu bookmark a click korle data gulo paschi. sehetu akhn map caliye sei data 
 
 
 
-hello
+42-7 Add Time when marked as read
+
+mark as read btn a click korle json er reading data ta dekhabo
+
+
+
+
+
+
+
+
+
